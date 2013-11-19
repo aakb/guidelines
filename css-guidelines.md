@@ -19,8 +19,8 @@ Content
 
 1. [Comments](#comments)
 2. [Declaration order](#declaration-order)
-3. [Media queries](media-queries)
-4. [Exceptions and deviations](exceptions-and-deviations)
+3. [Media queries](#media-queries)
+4. [Exceptions and deviations](#exceptions-and-deviations)
 
 <a name="comments"></a>
 1. Comments
