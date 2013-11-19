@@ -8,10 +8,10 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 
 * Be familiar with [SCSS](http://sass-lang.com/)
 * Read [this](http://www.jakobloekkemadsen.com/2013/07/css-abstractions-done-right/)
-* [And this about test driven CSS](http://www.jakobloekkemadsen.com/2012/09/tdcss-js/)
-* Use [SCSS](http://sass-lang.com), but only [nest one level](exceptions-and-deviations)
+* Read [this](http://www.jakobloekkemadsen.com/2012/09/tdcss-js/)
+* Use [SCSS](http://sass-lang.com), but only [nest one level](#exceptions-and-deviations)
 * [Be sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/)
-* [Don't break the windows](http://en.wikipedia.org/wiki/Broken_windows_theory)
+* [Don't break the windows](http://www.rtuin.nl/2012/08/software-development-and-the-broken-windows-theory/)
 * [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 
 Content
@@ -19,8 +19,8 @@ Content
 
 1. [Comments](#comments)
 2. [Declaration order](#declaration-order)
-3. [Media queries](media-queries)
-4. [Exceptions and deviations](exceptions-and-deviations)
+3. [Media queries](#media-queries)
+4. [Exceptions and deviations](#exceptions-and-deviations)
 
 <a name="comments"></a>
 1. Comments
@@ -56,7 +56,7 @@ Content
 * Add a single space after the colon of the declaration
 * @extend goes in the top so we know if the ruleset inherits another
 * Normal rules goes next
-* @inlude goes
+* @inlude goes last
 
 * Use predefined variables
 
@@ -97,7 +97,7 @@ Content
 3. Media queries
 ----------
 
-* Add media queries @includes after other @includes and @extends
+* Add media query @includes after other @includes and @extends
 
 ```css
 .class {  
