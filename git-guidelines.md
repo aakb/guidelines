@@ -18,6 +18,7 @@ Content
 2. [Main Branches](#main)
 3. [Feature Branches](#feature)
 4. [Release Branches](#release)
+5. [Maintenance Branches](#maintenance)
 
 <a name="workflow"></a>
 1. Gitflow Workflow
@@ -65,4 +66,18 @@ Conventions:
 * branch off: development
 * merge into: master
 * naming convention: release-* or release/*
+
+<a name="maintenance"></a>
+2. Maintenance Branches
+----------
+
+Maintenance or "hotfix" branches are used to quickly patch production releases. This is the only branch that can and should branch out directly of master. As soon as the fix is complete, it should be merged into both master and development (or the current release branch), and master should be tagged with an updated version number.
+
+We do allow hotfixes do be done directly on development branch as long as it won't interfer with any ongoing additional work and you have to fix something small quickly.
+
+Conventions:
+
+* branch off: master
+* merge into: development and master
+* naming convention: hotfix-*
 
