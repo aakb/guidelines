@@ -11,7 +11,7 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 * [And this about test driven CSS](http://www.jakobloekkemadsen.com/2012/09/tdcss-js/)
 * Use [SCSS](http://sass-lang.com), but only [nest one level](exceptions-and-deviations)
 * [Be sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/)
-* [Don't break the windows](http://en.wikipedia.org/wiki/Broken_windows_theory)
+* [Don't break the windows](http://www.rtuin.nl/2012/08/software-development-and-the-broken-windows-theory/)
 * [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 
 Content
