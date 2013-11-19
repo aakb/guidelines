@@ -88,9 +88,40 @@ Conventions:
 ----------
 
 ![gitflow](assets/git-workflow-gitflow.png "Gitflow, image taken from atlassian.com")  
-courtesy atlassian.com
+image courtesy of atlassian.com
 
 <a name="commit"></a>
 7. Writing good commit messages
 ----------
+
+Good commit messages serve three important purposes:
+
+* Speed up the reviewing process.
+* Help us write a good release note.
+* Help the future maintainers (it could be you!), say five years into the future, to find out why a particular change was made to the code or why a specific feature was added.
+
+Structure your commit message like this:
+
+<pre>
+Summarize clearly in one line what the commit is about
+
+Describe the problem the commit solves or the use
+case for a new feature. Justify why you chose
+the particular solution.
+</pre>
+
+h3. DO
+
+* Write the summary line and description of what you have done in the imperative mode, that is as if you were commanding someone. Write "fix", "add", "change" instead of "fixed", "added", "changed".
+
+* Always leave the second line blank.
+* Line break the commit message (to make the commit message readable without having to scroll horizontally).
+
+h3. DON'T
+
+* Don't end the summary line with a period.
+
+h3. Tips
+
+* If it seems difficult to summarize what your commit does, it may be because it includes several logical changes or bug fixes, and are better split up into several commits using @git add -p@. ([more on using git add -p](http://johnkary.net/blog/git-add-p-the-most-powerful-git-feature-youre-not-using-yet/))
 
