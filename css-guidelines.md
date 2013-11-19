@@ -56,7 +56,7 @@ Content
 * Add a single space after the colon of the declaration
 * @extend goes in the top so we know if the ruleset inherits another
 * Normal rules goes next
-* @inlude goes
+* @inlude goes last
 
 * Use predefined variables
 
