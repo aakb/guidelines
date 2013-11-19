@@ -97,7 +97,7 @@ Content
 3. Media queries
 ----------
 
-* Add media queries @includes after other @includes and @extends
+* Add media query @includes after other @includes and @extends
 
 ```css
 .class {  
