@@ -87,7 +87,8 @@ Conventions:
 6. Visual view of Gitflow model
 ----------
 
-![gitflow](assets/git-workflow-gitflow.png "Gitflow, image taken from atlassian.com")
+![gitflow](assets/git-workflow-gitflow.png "Gitflow, image taken from atlassian.com")  
+courtesy atlassian.com
 
 <a name="commit"></a>
 7. Writing good commit messages
