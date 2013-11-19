@@ -113,7 +113,6 @@ the particular solution.
 ### Do
 
 * Write the summary line and description of what you have done in the imperative mode, that is as if you were commanding someone. Write "fix", "add", "change" instead of "fixed", "added", "changed".
-
 * Always leave the second line blank.
 * Line break the commit message (to make the commit message readable without having to scroll horizontally).
 
@@ -123,5 +122,5 @@ the particular solution.
 
 ### Tips
 
-* If it seems difficult to summarize what your commit does, it may be because it includes several logical changes or bug fixes, and are better split up into several commits using @git add -p@. ([more on using git add -p](http://johnkary.net/blog/git-add-p-the-most-powerful-git-feature-youre-not-using-yet/))
+* If it seems difficult to summarize what your commit does, it may be because it includes several logical changes or bug fixes, and are better split up into several commits using [git add -p](http://johnkary.net/blog/git-add-p-the-most-powerful-git-feature-youre-not-using-yet/).
 
