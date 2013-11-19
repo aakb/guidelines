@@ -13,6 +13,7 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 * [Be sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/)
 * [Don't break the windows](http://www.rtuin.nl/2012/08/software-development-and-the-broken-windows-theory/)
 * [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+* Use [single-direction margin declarations](http://csswizardry.com/2012/06/single-direction-margin-declarations/)
 
 Content
 ----------
