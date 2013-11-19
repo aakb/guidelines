@@ -1,4 +1,5 @@
-# ITK Design - CSS guidelines
+ITK Design - CSS guidelines
+==========
 
 This document is a CSS guidelines for working with projects at ITK Design.
 
@@ -13,7 +14,8 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 * [Don't break the windows](http://en.wikipedia.org/wiki/Broken_windows_theory)
 * [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
 
-## Content
+Content
+----------
 
 1. [Comments](#comments)
 2. [Declaration order](#declaration-order)
@@ -21,7 +23,8 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 
 
 <a name="comments"></a>
-## Comments
+Comments
+----------
 
 * Place comments on a new line above the subject
 
@@ -46,7 +49,8 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 ```
 
 <a name="declaration-order"></a>
-## 2. Declaration order
+2. Declaration order
+----------
 
 * One selector per line
 * Add a single space after the colon of the declaration
@@ -90,7 +94,8 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 ```
 
 <a name="media-queries"></a>
-## 3. Media queries
+3. Media queries
+----------
 
 * Add media queries @includes after other @includes and @extends
 
@@ -109,7 +114,8 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 ```
 
 <a name="exceptions-and-deviations"></a>
-## 4. Exceptions and deviations
+4. Exceptions and deviations
+----------
 
 * You can nest two levels when using pseudo classes
 * You can nest two levels when using media queries mixins
