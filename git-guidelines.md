@@ -19,6 +19,8 @@ Content
 3. [Feature Branches](#feature)
 4. [Release Branches](#release)
 5. [Maintenance Branches](#maintenance)
+6. [Gitflow made visual](#visual)
+7. [Commit messages](#commit)
 
 <a name="workflow"></a>
 1. Gitflow Workflow
@@ -42,7 +44,7 @@ Work and branching out takes place from development branch and everytime a merge
 It's convenient to tag all commits in the master branch with a version number.
 
 <a name="feature"></a>
-2. Feature Branches
+3. Feature Branches
 ----------
 
 New features should reside in its own branch, which can then be pushed to the central repository. Never branch off of master, feature branches use development as their parent. When a feature is completed, it is merged back into development. Feature branches should never interact directly with master.
@@ -56,7 +58,7 @@ Conventions:
 * naming convention: anything except master, development, release-*, or hotfix-*
 
 <a name="release"></a>
-2. Release Branches
+4. Release Branches
 ----------
 
 When enough features have been accomulated into the development branch a release branch i created. A release branch is not strictly needed as development could be merged directly into master branch. So we only create the release branch if we need to use it for final adjustments or demonstration before merging it into master.
@@ -68,7 +70,7 @@ Conventions:
 * naming convention: release-* or release/*
 
 <a name="maintenance"></a>
-2. Maintenance Branches
+5. Maintenance Branches
 ----------
 
 Maintenance or "hotfix" branches are used to quickly patch production releases. This is the only branch that can and should branch out directly of master. As soon as the fix is complete, it should be merged into both master and development (or the current release branch), and master should be tagged with an updated version number.
@@ -80,4 +82,14 @@ Conventions:
 * branch off: master
 * merge into: development and master
 * naming convention: hotfix-*
+
+<a name="visual"></a>
+6. Visual view of Gitflow model
+----------
+
+![gitflow](assets/git-workflow-gitflow.png "Gitflow, image taken from atlassian.com")
+
+<a name="commit"></a>
+7. Writing good commit messages
+----------
 
