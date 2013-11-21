@@ -25,6 +25,7 @@ Content
 2. [Naming](#naming)
 3. [Code Structure](#code_structure)
 4. [Updating core modules](#update_core)
+5. [Altering existing modules](#altering_modules)
 
 <a name="coding_standards"></a>
 1. Coding Standards
@@ -154,9 +155,12 @@ Repositories should be named after the module/project contained within. The repo
 * If a project core module is expanded with updates to current functionality the default behavior must be the same as previous versions or as close to this as possible. This also includes new modules which replaces current modules.
 * If an update does not provide a way to reuse existing content and/or configuration then the decision on whether to include the change resides with the Project owner.
 
+<a name="altering_modules"></a>
+5. Altering existing modules
+----------
 
-Altering existing modules
+* Modules which alter or extend functionality provided by the project core modules should use appropriate alter hooks to override these instead of forking these modules.
+* In cases where modules provide layered configuration, modules should implement new layers with a higher priority than default configuration. This instead of altering the default configuration. This is often handled through lower weights. To support multiple modules providing separate layers of configuration without conflicts identifiers must be unique to the module as opposed to auto-generated. This may require altering auto-generated code manually. The recommended way to generate unique identifiers would be to prefix the existing identifier with the module name. Example: Panel variants.
+* It is preferable to add a new layer to layered configuration instead of altering an existing layer provided by the core modules. This ensures that alterations and extensions work as expected even when the core modules are updated. This means that sites which use alterations may not reflect the latest changes to core. It is deemed preferable instead of potentially breaking the site.
 
-Modules which alter or extend functionality provided by the core modules should use appropriate alter hooks to override these instead of forking these modules.
-In cases where modules provide layered configuration modules should implement new layers with a higher priority than default configuration instead of altering the default configuration. This is often handled through lower weights. To support multiple modules providing separate layers of configuration without conflicts identifiers must be unique to the module as opposed to auto-generated. This may require altering auto-generated code manually. The recommended way to generate unique identifiers would be to prefix the existing identifier with the module name. Example: Panel variants.
-It is preferable to add a new layer to layered configuration instead of altering an existing layer provided by the core modules. This ensures that alterations and extensions work as expected even when the core modules are updated. This means that sites which use alterations may not reflect the latest changes to core. It is deemed preferable instead of potentially breaking the site.
+
