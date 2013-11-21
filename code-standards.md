@@ -21,11 +21,12 @@ Contributions to the core project will be reviewed by members of the core team. 
 Content
 ----------
 
-1. [Coding standards](#coding_standards)
+1. [Coding Standards](#coding_standards)
 2. [Naming](#naming)
+3. [Code Structure](#code_structure)
 
 <a name="coding_standards"></a>
-1. Coding standards
+1. Coding Standards
 ----------
 
 ### PHP
@@ -130,23 +131,27 @@ Programmatic elements such as variables, content types, views and panel pages, d
 
 ### Repositories
 
-Repositories should be named after the module/feature/project contained within. The repository for the module projectname_event should be called projectname_event.
+Repositories should be named after the module/project contained within. The repository for the module projectname_event should be called projectname_event.
 
 
 <a name="code_structure"></a>
 3. Code Structure
 ----------
 
-Each module should be placed within its own repository. Each repository should only contain one module.
-If a module has dependencies these should be declared within a .make file included with the module so that they are downloaded automatically during a build. Dependencies can be projects on Drupal.org or external resources. It is recommended that dependencies specify a specific version.
-A module should provide all required code and resources for it to work on its own or through dependencies. This includes all configuration, theming, CSS, images and JavaScript libraries.
-All default configuration required for a module to function should be implemented in code. The preferred way of doing this is using the Features module or hooks provided by the module itself. Modules where configuration cannot be handled using features should maintain configuration using hook_install() and hook_update_N().
-If a module requires configuration for which there is no sensible default the module must implement hook_ding_install_tasks() such that users can perform the necessary configuration during installation.
-All default text content in modules must be in English. Localization of content must be handled using the Drupal translation modules. 
+* Each module/project should be placed within its own repository. Each repository should only contain one module/project.
+* If a module/project has dependencies these should be declared within a .make file included with the module so that they are downloaded automatically during a build. Dependencies can be projects on Drupal.org or external resources. It is recommended that dependencies specify a specific version.
+* A module/project should provide all required code and resources for it to work on its own or through dependencies. This includes all configuration, theming, CSS, images and JavaScript libraries.
+* All default configuration required for a module/project to function should be implemented in code. The preferred way of doing this is using the [Features module](https://drupal.org/project/features) or hooks provided by the module itself. Modules/projects where configuration cannot be handled using features should maintain configuration using hook_install() and hook_update_N().
+* If a module/project require configuration for which there is no sensible default the module must implement hook_install_tasks() so users can perform the necessary configuration during installation.
+* All default text content in modules must be in English. Localization of content must be handled using the Drupal translation modules. 
+
+
 Updating core modules
 
 If a core module is expanded with updates to current functionality the default behavior must be the same as previous versions or as close to this as possible. This also includes new modules which replaces current modules.
 If an update does not provide a way to reuse existing content and/or configuration the update then the decision on whether to include the change resides with the Ding team. If the Ding team can not reach an agreement the Ding Council will make the decision.
+
+
 Altering existing modules
 
 Modules which alter or extend functionality provided by the core modules should use appropriate alter hooks to override these instead of forking these modules.
