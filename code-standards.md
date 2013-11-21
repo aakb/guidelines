@@ -24,6 +24,7 @@ Content
 1. [Coding Standards](#coding_standards)
 2. [Naming](#naming)
 3. [Code Structure](#code_structure)
+4. [Updating core modules](#update_core)
 
 <a name="coding_standards"></a>
 1. Coding Standards
@@ -146,10 +147,12 @@ Repositories should be named after the module/project contained within. The repo
 * All default text content in modules must be in English. Localization of content must be handled using the Drupal translation modules. 
 
 
-Updating core modules
+<a name="update_core"></a>
+4. Updating project core modules
+----------
 
-If a core module is expanded with updates to current functionality the default behavior must be the same as previous versions or as close to this as possible. This also includes new modules which replaces current modules.
-If an update does not provide a way to reuse existing content and/or configuration the update then the decision on whether to include the change resides with the Ding team. If the Ding team can not reach an agreement the Ding Council will make the decision.
+* If a project core module is expanded with updates to current functionality the default behavior must be the same as previous versions or as close to this as possible. This also includes new modules which replaces current modules.
+* If an update does not provide a way to reuse existing content and/or configuration then the decision on whether to include the change resides with the Project owner.
 
 
 Altering existing modules
