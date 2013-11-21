@@ -12,10 +12,12 @@ The guidelines should help achieve:
 * The best possible conditions for sharing modules between sites
 * The best possible conditions for the individual website to customize configuration and appearance
 
-*When working with a open source community project like Ding*  
+**When working with a open source community project like Ding**  
 Contributions to the core project will be reviewed by members of the core team. These guidelines should inform contributors about what to expect in such a review. If a review comment cannot be traced back to one of these guidelines it indicates that the guidelines should be updated to ensure transparency.
 
-* Be familiar with [Drupal Coding Standards](https://drupal.org/coding-standards)
+### Be familiar with
+
+* Drupal Coding Standards](https://drupal.org/coding-standards)
 * and [PHP codesniffer](http://pear.php.net/manual/en/package.php.php-codesniffer.php)
 
 Content
