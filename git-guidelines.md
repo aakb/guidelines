@@ -112,9 +112,16 @@ the particular solution.
 
 ### Do
 
-* Write the summary line and description of what you have done in the imperative mode, that is as if you were commanding someone. Write "fix", "add", "change" instead of "fixed", "added", "changed".
-* Always leave the second line blank.
+
+* Write the summary line and description of what you have done in past tense, indicating that the event took place in the past. Write "fixed", "added", "changed", "updated" instead of "fix", "add", "chang", "update.
 * Line break the commit message (to make the commit message readable without having to scroll horizontally).
+
+Usually, commit messages start with the (past tense) verb
+
+* "Added" (new feature)
+* "Fixed" (bug fix)
+* "Changed" (task)
+* "Updated" (task, due to changes in third-party code)
 
 ### Don't
 
