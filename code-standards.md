@@ -22,6 +22,7 @@ Content
 ----------
 
 1. [Coding standards](#coding_standards)
+2. [Naming](#naming)
 
 <a name="coding_standards"></a>
 1. Coding standards
@@ -75,55 +76,66 @@ See [CSS guidelines](css-guidelines.md)
 
 **LICENSE.txt:** All repositories must contain a LICENSE.txt file containing the license for project: GPL2.
 
+<a name="naming"></a>
+2. Naming
+----------
 
-Naming
 
-General
+### General
 
 All names must be in English.
-Modules
 
-All modules written specifically for Ding must be prefixed with either ding or ting e.g.ding_your_module. Which prefix to choose depends on the scope of the module:<
-Modules dealing primarily with the Open* webservices should be prefixed with ting e.g. ting_search_autocomplete.
-Modules providing functionality based on library systems or the Ding content model should be prefixed with ding e.g. ding_event.
-The prefixed are not required for modules which provides functionality deemed relevant outside the Ding sphere e.g. Blackhole and Opening Hours.
-Files
+### Modules
+
+All modules written specifically for *projectname* must be prefixed with *projectname* e.g. projectname_your_module. Use a sharthand name whe working on a project with a long name.
+
+The prefix are not required for modules which provides functionality deemed relevant outside the *projectname* sphere e.g. generic modules that have relevance on other projects as well.
+
+### Files
 
 Files provide by modules must be placed in the following folders and have the extensions defined here.
 
-General
-MODULENAME.info
-MODULENAME.module
-MODULENAME.install
-includes/*.inc
-templates/*.tpl.php
-*.theme.inc
-CSS:
-CSS files must use the BAT (Base/Admin/Theme) naming schema as described here.
-/css/*.(base|admin|theme).css
-/sass/*.(base|admin|theme).scss
-/sass/libs/*
-JavaScript
-Files must have to include the module name to easily find there origin during debugging
-/js/*.MODULENAME.js
-Images
-Images resources must be placed in a folder named img and have the following extensions.
-img/*.(png|jpeg|gif)
-External resources (PHP and JavaScript libraries) must be included using Libraries API version 2.x module
-Module elements
+* General
+ * MODULENAME.info
+ * MODULENAME.module
+ * MODULENAME.install
+ * includes/*.inc
+ * templates/*.tpl.php
+ * *.theme.inc
+* CSS
+ * CSS files must use the BAT (Base/Admin/Theme) naming schema as described here.
+ * /css/*.(base|admin|theme).css
+ * /sass/*.(base|admin|theme).scss
+ * /sass/libs/*
+* JavaScript
+ * Files must include the module name to easily find their origin during debugging
+ * /js/*.MODULENAME.js
+* Images
+ * Image resources must be placed in a folder named images and have the following extensions.
+ * images/*.(png|jpeg|gif|svg)
+* External resources (PHP and JavaScript libraries) must be included using [Libraries API](https://drupal.org/project/libraries)
+
+### Module elements
 
 Programmatic elements such as variables, content types, views and panel pages, defined in modules must comply to a set of common guidelines.
-Machine names should be prefixed with the name of the module that defines them
-Administrative titles, human readable names and descriptions should contain the purpose of the view
-If a programmatic element supports tagging e.g. rules and views one of the tags must be the name of the module that defines them 
-As there is no finite set of programmatic elements for a Ding site these apply to all types except if explicitly specified below.
 
-Guidelines for specific elements:
-Panel variants (handlers) must not use auto generated names as this increases the risk of different modules implementing variants for the same pages overwriting each other. Instead use module_name_page_name_variant_name e.g. ding_blog_node_view_blog NB: Auto generated names is the default behavior when using features!
-Repositories
+* Machine names should be prefixed with the name of the module that defines them.
+* Administrative titles, human readable names and descriptions should contain the purpose.
+* If a programmatic element supports tagging e.g. rules and views one of the tags must be the name of the module that defines them.
+* As there is no finite set of programmatic elements for a site these apply to all types except if explicitly specified below.
 
-Repositories should names after the module contained within. The repository for the module ding_event should be called ding_event.
-Code Structure
+**Guidelines for specific elements:**
+
+* Panel variants (handlers) must not use auto generated names as this increases the risk of different modules implementing variants for the same pages overwriting each other. Instead use module_name_page_name_variant_name e.g. projectname_blog_node_view_blog NB: Auto generated names is the default behavior when using features!
+
+### Repositories
+
+Repositories should be named after the module/feature/project contained within. The repository for the module projectname_event should be called projectname_event.
+
+
+<a name="code_structure"></a>
+3. Code Structure
+----------
 
 Each module should be placed within its own repository. Each repository should only contain one module.
 If a module has dependencies these should be declared within a .make file included with the module so that they are downloaded automatically during a build. Dependencies can be projects on Drupal.org or external resources. It is recommended that dependencies specify a specific version.
