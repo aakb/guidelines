@@ -32,3 +32,13 @@ We treat one another with respect. Everyone can make a valuable contribution. We
 ----------
 
 Collaboration is central to a project and to it's success. This collaboration involves individuals with very different backgrounds and sometimes different goals for the project working with each other in teams, and teams within the project working with other projects outside. This collaboration is for the benefit of the project, and should improve the quality of our work. Internally and externally, we should always be open to collaboration. Wherever possible, we should work closely with upstream projects and others in the software community to coordinate our technical, advocacy, documentation, and other work. Our work should be done transparently and we should involve as many interested parties as early as possible. If we decide to take a different approach than others, we will let them know early, document our work and inform others regularly of our progress.
+
+<a name="disagreements"></a>
+1. When we disagree, we consult others
+----------
+
+The title pretty much says it all.
+
+Solving disagreement is important to do in a timely manner and respectful way. Please seek help from other team members or stakeholders within the project when disagrements can't be solved through a simple and constructive discussion.
+
+Please speak up if you notice disagreement and have the conclusions that can end it.
