@@ -48,3 +48,9 @@ Please speak up if you notice disagreement and have the conclusions that can end
 ----------
 
 Nobody knows everything, and nobody is expected to be perfect. Asking questions avoids many problems down the road, and so questions are encouraged. Those who are asked questions should be responsive and helpful. However, when asking a question, it is also important to respect an answer that might not be what was expected.
+
+<a name="stepping_down"></a>
+1. Step down considerately
+----------
+
+Members of projects come and go. When somebody leaves or disengages from the project, in whole or in part, we ask that they do so in a way that minimizes disruption to the project. This means they should tell people they are leaving and take the proper steps to ensure that others can pick up where they left off.
