@@ -27,3 +27,8 @@ Our work will be used by other people, and we in turn will depend on the work of
 
 We treat one another with respect. Everyone can make a valuable contribution. We may not always agree, but disagreement is no excuse for poor behavior and poor manners. We might all experience some frustration now and then, but we cannot allow that frustration to turn into a personal attack. It's important to remember that a cooperation where people feel uncomfortable or threatened is not a productive one. Everyone is expected to be respectful when dealing with other stakeholders, users, developers etc. as well as with people outside of the project.
 
+<a name="collaborative"></a>
+1. Be collaborative
+----------
+
+Collaboration is central to a project and to it's success. This collaboration involves individuals with very different backgrounds and sometimes different goals for the project working with each other in teams, and teams within the project working with other projects outside. This collaboration is for the benefit of the project, and should improve the quality of our work. Internally and externally, we should always be open to collaboration. Wherever possible, we should work closely with upstream projects and others in the software community to coordinate our technical, advocacy, documentation, and other work. Our work should be done transparently and we should involve as many interested parties as early as possible. If we decide to take a different approach than others, we will let them know early, document our work and inform others regularly of our progress.
