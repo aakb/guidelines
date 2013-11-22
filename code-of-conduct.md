@@ -42,3 +42,9 @@ The title pretty much says it all.
 Solving disagreement is important to do in a timely manner and respectful way. Please seek help from other team members or stakeholders within the project when disagrements can't be solved through a simple and constructive discussion.
 
 Please speak up if you notice disagreement and have the conclusions that can end it.
+
+<a name="unsure"></a>
+1. When we are unsure, we ask for help
+----------
+
+Nobody knows everything, and nobody is expected to be perfect. Asking questions avoids many problems down the road, and so questions are encouraged. Those who are asked questions should be responsive and helpful. However, when asking a question, it is also important to respect an answer that might not be what was expected.
