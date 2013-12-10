@@ -61,20 +61,16 @@ See [Drupal's JavaScript coding standards](https://drupal.org/node/172169).
 
 #### Examples
 
-__HTML__
 ```html
   <a href="http://example.com" class="button js-make-active">This is a button</a>
 ```
 
-__Javascript__
 ```javacript
   $(".js-make-active").click(function() {
     $(this).addClass('.is-active');
   });
-
 ```
 
-__CSS__
 ```css
 .button {
   background-color: $gray;
@@ -85,7 +81,6 @@ __CSS__
 }
 ```
 
-__HTML result when clicked__
 ```html
   <a href="http://example.com" class="button is-active js-do-something">This is a button</a>
 ```
