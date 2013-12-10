@@ -172,6 +172,8 @@ If states are needed prefix it with <code>.is-</code>, <code>.has-</code> etc., 
 5. Javascript
 ----------
 
+* Don't use <code>.js-</code> for styling
+
 [See javascript guidelines](js-guidelines.md)
 
 <a name="exceptions-and-deviations"></a>

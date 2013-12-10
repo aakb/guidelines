@@ -3,13 +3,15 @@ ITK Design - Javacript guidelines
 
 This document is a _frontend/theme_ javacript guideline for working with projects at ITK Design.
 
-We use [Drupal's JavaScript coding standards](https://drupal.org/node/172169) with a few exceptions and deviations that are mentioned below.
+We use jQuery and native javascript along with [Drupal's JavaScript coding standards](https://drupal.org/node/172169) and the exceptions and deviations that are mentioned below.
 
 Content
 ----------
 
 1. [File structure](#file-structure)
 2. [Comments](#comments)
+3. [Functions, loops etc.] (#functions-loops-etc)
+4. [Manipulating markup and CSS](#manipulating-markup-css)
 
 <a name="file-structure"></a>
 1. File structure
@@ -39,4 +41,51 @@ Place files in a folder named __scripts__. Place shared functions etc. in a file
  */ 
 
 // This is an inline comment
+```
+
+<a name="functions-loops-etc"></a>
+3. Functions, loops etc.
+----------
+
+See [Drupal's JavaScript coding standards](https://drupal.org/node/172169).
+
+
+<a name="manipulating-markup-css"></a>
+4. Manipulating markup and CSS
+----------
+
+* Prefix elements with <code>.js-</code>
+* Don't use <code>.js-</code> for styling
+* Use state classes like <code>.is-</code>, <code>.has-</code> as mentioned in the [CSS guidelines](css-guidelines.md).
+* For sending data from the frontend to javascript use the [HTML5 data attribute](http://html5doctor.com/html5-custom-data-attributes/)
+
+#### Examples
+
+__HTML__
+```html
+  <a href="http://example.com" class="button js-make-active">This is a button</a>
+```
+
+__Javascript__
+```javacript
+  $(".js-make-active").click(function() {
+    $(this).addClass('.is-active');
+  });
+
+```
+
+__CSS__
+```css
+.button {
+  background-color: $gray;
+
+  &.is-active {
+    background-color: $green; 
+  }
+}
+```
+
+__HTML result when clicked__
+```html
+  <a href="http://example.com" class="button is-active js-do-something">This is a button</a>
 ```
