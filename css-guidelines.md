@@ -29,7 +29,7 @@ Content
 1. Comments
 ----------
 
-* Place comments on a new line above the subject
+* Place inline comments on a new line above the subject
 
 ```css
 /**
