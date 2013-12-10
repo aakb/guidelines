@@ -11,7 +11,7 @@ Content
 1. [File structure](#file-structure)
 2. [Comments](#comments)
 3. [Functions, loops etc.] (#functions-loops-etc)
-4. [Manipulating markup and CSS](#manipulating-markup-css)
+4. [Manipulating the frontend](#manipulating-frontend)
 
 <a name="file-structure"></a>
 1. File structure
@@ -50,8 +50,8 @@ Place files in a folder named __scripts__. Place shared functions etc. in a file
 See [Drupal's JavaScript coding standards](https://drupal.org/node/172169).
 
 
-<a name="manipulating-markup-css"></a>
-4. Manipulating markup and CSS
+<a name="manipulating-frontend"></a>
+4. Manipulating the frontend
 ----------
 
 * Prefix elements with <code>.js-</code>
