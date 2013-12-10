@@ -82,7 +82,7 @@ Naming are based (very) loosely on BEM. Module elements is separated with two da
 ```
 
 ### States
-If states are needed prefix it with __is-__, __has-__ etc., also check out the [javascript guidelines](js-guidelines.md).
+If states are needed prefix it with <code>.is-</code>, <code>.has-</code> etc., also check out the [javascript guidelines](js-guidelines.md).
 
 ```html
 <a href="http://example.com" class="button">This is a link button</a>
@@ -107,9 +107,9 @@ If states are needed prefix it with __is-__, __has-__ etc., also check out the [
 
 * One selector per line
 * Add a single space after the colon of the declaration
-* @extend goes in the top so we know if the ruleset inherits another
+* <code>@extend</code> goes in the top so we know if the ruleset inherits another
 * Normal rules goes next
-* @include goes last
+* <code>@include</code> goes last
 
 ```css
 .class {
@@ -148,7 +148,7 @@ If states are needed prefix it with __is-__, __has-__ etc., also check out the [
 4. Media queries
 ----------
 
-* Add media query @includes after other @includes and @extends
+* Add media query <code>@includes</code> after other <code>@includes</code> and <code>@extends</code>
 
 ```css
 .class {  
