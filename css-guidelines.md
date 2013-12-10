@@ -1,7 +1,7 @@
 ITK Design - CSS guidelines
 ==========
 
-This document is a CSS guidelines for working with projects at ITK Design.
+This document is a CSS guideline for working with projects at ITK Design.
 
 These are *guidelines*, and if you think it's necessary to deviate feel free to do so, **but** please [be sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/) and do this only because it's necessary.
 
