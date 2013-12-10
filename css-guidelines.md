@@ -19,10 +19,10 @@ Content
 ----------
 
 1. [Comments](#comments)
-2. [Naming](#naming)
+2. [Naming and states](#naming-states)
 3. [Declaration order](#declaration-order)
 4. [Media queries](#media-queries)
-5. [CSS, markup and javascript](#javascript)
+5. [Javascript](#javascript)
 6. [Exceptions and deviations](#exceptions-and-deviations)
 
 <a name="comments"></a>
@@ -53,9 +53,11 @@ Content
 // This is an inline SCSS comment (use this in scss files)
 ```
 
-<a name="naming"></a>
-2. Naming
+<a name="naming-states"></a>
+2. Naming and states
 ----------
+
+### Naming
 
 Naming are based (very) loosely on BEM. Module elements is separated with two dashes, and the module name itself can have single dashes if needed.
 
@@ -76,6 +78,26 @@ Naming are based (very) loosely on BEM. Module elements is separated with two da
 }
 
 .search--field {
+}
+```
+
+### States
+If states are needed prefix it with __is-__, __has-__ etc., also check out the [javascript guidelines](js-guidelines.md).
+
+```html
+<a href="http://example.com" class="button">This is a link button</a>
+
+<a href="http://example.com" class="button is-active">This is a link button</a>
+```
+
+
+```css
+.button {
+  background-color: $gray;
+
+  &.is-active {
+    background-color: $green; 
+  }
 }
 ```
 
@@ -147,7 +169,7 @@ Naming are based (very) loosely on BEM. Module elements is separated with two da
 ```
 
 <a name="javascript"></a>
-5. CSS, markup and javascript
+5. Javascript
 ----------
 
 [See javascript guidelines](js-guidelines.md)
