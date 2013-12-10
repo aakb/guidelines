@@ -87,9 +87,7 @@ Naming are based (very) loosely on BEM. Module elements is separated with two da
 * Add a single space after the colon of the declaration
 * @extend goes in the top so we know if the ruleset inherits another
 * Normal rules goes next
-* @inlude goes last
-
-* Use predefined variables
+* @include goes last
 
 ```css
 .class {
