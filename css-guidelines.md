@@ -19,9 +19,11 @@ Content
 ----------
 
 1. [Comments](#comments)
-2. [Declaration order](#declaration-order)
-3. [Media queries](#media-queries)
-4. [Exceptions and deviations](#exceptions-and-deviations)
+2. [Naming](#naming)
+3. [Declaration order](#declaration-order)
+4. [Media queries](#media-queries)
+5. [CSS, markup and javascript](#javascript)
+6. [Exceptions and deviations](#exceptions-and-deviations)
 
 <a name="comments"></a>
 1. Comments
@@ -46,11 +48,39 @@ Content
  * ========================================================================== */
    
 
-/* This is an inline comment */
+/* This is an inline CSS comment (use this in css files) */
+
+// This is an inline SCSS comment (use this in scss files)
+```
+
+<a name="naming"></a>
+2. Naming
+----------
+
+Naming are based (very) loosely on BEM. Module elements is separated with two dashes, and the module name itself can have single dashes if needed.
+
+```css
+.module-name {  
+}
+
+.module-name--element-1 {  
+}
+
+.module-name--element-2 {  
+}
+
+.search {
+}
+
+.search--button {
+}
+
+.search--field {
+}
 ```
 
 <a name="declaration-order"></a>
-2. Declaration order
+3. Declaration order
 ----------
 
 * One selector per line
@@ -95,7 +125,7 @@ Content
 ```
 
 <a name="media-queries"></a>
-3. Media queries
+4. Media queries
 ----------
 
 * Add media query @includes after other @includes and @extends
@@ -104,18 +134,28 @@ Content
 .class {  
   background-color: $blue;
 
-  @include breakpoint-1() {
+  @include breakpoint(10em) {
   	background-color: $red;
   }
   
-  @include breakpoint-2() {
-  	background-color: $red;
+  @include breakpoint(20em) {
+  	background-color: $green;
+  }
+  
+  @include breakpoint($breakpoint) {
+  	background-color: $white;
   }
 }
 ```
 
+<a name="javascript"></a>
+5. CSS, markup and javascript
+----------
+
+[See javascript guidelines](js-guidelines.md)
+
 <a name="exceptions-and-deviations"></a>
-4. Exceptions and deviations
+6. Exceptions and deviations
 ----------
 
 * You can nest two levels when using pseudo classes
