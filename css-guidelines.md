@@ -19,11 +19,12 @@ Content
 ----------
 
 1. [Comments](#comments)
-2. [Naming and states](#naming-states)
-3. [Declaration order](#declaration-order)
-4. [Media queries](#media-queries)
-5. [Javascript](#javascript)
-6. [Exceptions and deviations](#exceptions-and-deviations)
+2. [File structure](#file-structure)
+3. [Naming and states](#naming-states)
+4. [Declaration order](#declaration-order)
+5. [Media queries](#media-queries)
+6. [Javascript](#javascript)
+7. [Exceptions and deviations](#exceptions-and-deviations)
 
 <a name="comments"></a>
 1. Comments
@@ -42,7 +43,7 @@ Content
 
 
 /* Section comment
- *
+ *1
  * Optional description
  *
  * ========================================================================== */
@@ -53,8 +54,34 @@ Content
 // This is an inline SCSS comment (use this in scss files)
 ```
 
+<a name="file-structure"></a>
+2. File structure
+----------
+
+- Files that contains multiple words are separated with dashes e.g. <code>_my-module.scss</code>
+
+__Example__
+```code
+sass/
+  base/
+    _base.scss
+  layout/
+    _layout.scss
+  modules/
+    _my-module.scss
+    _search.scss
+    _form.scss
+  patterns/
+    _patterns.scss
+    _search-patterns.scss
+  theme/    
+    _theme-vars.scss
+    _buttons.scss
+  styles.scss
+```
+
 <a name="naming-states"></a>
-2. Naming and states
+3. Naming and states
 ----------
 
 ### Naming
@@ -102,7 +129,7 @@ If states are needed prefix it with <code>.is-</code>, <code>.has-</code> etc., 
 ```
 
 <a name="declaration-order"></a>
-3. Declaration order
+4. Declaration order
 ----------
 
 * One selector per line
@@ -145,7 +172,7 @@ If states are needed prefix it with <code>.is-</code>, <code>.has-</code> etc., 
 ```
 
 <a name="media-queries"></a>
-4. Media queries
+5. Media queries
 ----------
 
 * Add media query <code>@includes</code> after other <code>@includes</code> and <code>@extends</code>
@@ -169,7 +196,7 @@ If states are needed prefix it with <code>.is-</code>, <code>.has-</code> etc., 
 ```
 
 <a name="javascript"></a>
-5. Javascript
+6. Javascript
 ----------
 
 * Don't use <code>.js-</code> for styling
@@ -177,7 +204,7 @@ If states are needed prefix it with <code>.is-</code>, <code>.has-</code> etc., 
 [See javascript guidelines](js-guidelines.md)
 
 <a name="exceptions-and-deviations"></a>
-6. Exceptions and deviations
+7. Exceptions and deviations
 ----------
 
 * You can nest two levels when using pseudo classes
