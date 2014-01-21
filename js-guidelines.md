@@ -31,19 +31,11 @@ Place files in a folder named __scripts__. Place shared functions etc. in a file
 2. Comments
 ----------
 
-```javascript
-/**
- * File name
- *
- * Optional description
- *
- * @author author name
- */ 
+Inline documentation for source files should follow the Doxygen formatting conventions.
 
-// This is an inline comment
-```
+Non-documentation comments are strongly encouraged. A general rule of thumb is that if you look at a section of code and think "Wow, I don't want to try and describe that", you need to comment it before you forget how it works. Comments can be removed by JS compression utilities later, so they don't negatively impact on the file download size.
 
-<a name="functions-loops-etc"></a>
+Non-documentation comments should use capitalized sentences with punctuation. All caps are used in comments only when referencing constants, e.g., TRUE. Comments should be on a separate line immediately before the code line or block they reference
 3. Functions, loops etc.
 ----------
 
