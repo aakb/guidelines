@@ -31,11 +31,16 @@ Place files in a folder named __scripts__. Place shared functions etc. in a file
 2. Comments
 ----------
 
-Inline documentation for source files should follow the Doxygen formatting conventions.
+Inline documentation for source files should follow the <a href="https://drupal.org/node/1354">Doxygen formatting conventions</a>.
 
 Non-documentation comments are strongly encouraged. A general rule of thumb is that if you look at a section of code and think "Wow, I don't want to try and describe that", you need to comment it before you forget how it works. Comments can be removed by JS compression utilities later, so they don't negatively impact on the file download size.
 
 Non-documentation comments should use capitalized sentences with punctuation. All caps are used in comments only when referencing constants, e.g., TRUE. Comments should be on a separate line immediately before the code line or block they reference
+
+```code
+//Unselect all other checkboxes.
+```
+
 3. Functions, loops etc.
 ----------
 
