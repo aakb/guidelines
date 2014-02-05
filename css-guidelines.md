@@ -1,7 +1,7 @@
-ITK Design - CSS guidelines
+ITK Design - CSS guidelines (SASS)
 ==========
 
-This document is a CSS guidelines for working with projects at ITK Design.
+g
 
 These are *guidelines*, and if you think it's necessary to deviate feel free to do so, **but** please [be sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/) and do this only because it's necessary.
 
@@ -19,15 +19,18 @@ Content
 ----------
 
 1. [Comments](#comments)
-2. [Declaration order](#declaration-order)
-3. [Media queries](#media-queries)
-4. [Exceptions and deviations](#exceptions-and-deviations)
+2. [File structure](#file-structure)
+3. [Naming and states](#naming-states)
+4. [Declaration order](#declaration-order)
+5. [Media queries](#media-queries)
+6. [Javascript](#javascript)
+7. [Exceptions and deviations](#exceptions-and-deviations)
 
 <a name="comments"></a>
 1. Comments
 ----------
 
-* Place comments on a new line above the subject
+* Place inline comments on a new line above the subject
 
 ```css
 /**
@@ -40,26 +43,100 @@ Content
 
 
 /* Section comment
- *
+ *1
  * Optional description
  *
  * ========================================================================== */
    
 
-/* This is an inline comment */
+/* This is an inline CSS comment (use this in css files) */
+
+// This is an inline SCSS comment (use this in scss files)
+```
+
+<a name="file-structure"></a>
+2. File structure
+----------
+
+- Files that contains multiple words are separated with dashes e.g. <code>_my-module.scss</code>
+
+__Example__
+```code
+sass/
+  base/
+    _base.scss
+  layout/
+    _layout.scss
+  modules/
+    _my-module.scss
+    _search.scss
+    _form.scss
+  patterns/
+    _patterns.scss
+    _search-patterns.scss
+  theme/    
+    _theme-vars.scss
+    _buttons.scss
+  styles.scss
+```
+
+<a name="naming-states"></a>
+3. Naming and states
+----------
+
+### Naming
+
+Naming are based (very) loosely on BEM. Module elements is separated with two dashes, and the module name itself can have single dashes if needed.
+
+```css
+.module-name {  
+}
+
+.module-name--element-1 {  
+}
+
+.module-name--element-2 {  
+}
+
+.search {
+}
+
+.search--button {
+}
+
+.search--field {
+}
+```
+
+### States
+If states are needed prefix it with <code>.is-</code>, <code>.has-</code> etc., also check out the [javascript guidelines](js-guidelines.md).
+
+```html
+<a href="http://example.com" class="button">This is a link button</a>
+
+<a href="http://example.com" class="button is-active">This is a link button</a>
+```
+
+
+```css
+.button {
+  background-color: $gray;
+
+  &.is-active {
+    background-color: $green; 
+  }
+}
 ```
 
 <a name="declaration-order"></a>
-2. Declaration order
+4. Declaration order
 ----------
 
 * One selector per line
 * Add a single space after the colon of the declaration
-* @extend goes in the top so we know if the ruleset inherits another
+* <code>@extend</code> goes in the top so we know if the ruleset inherits another
 * Normal rules goes next
-* @inlude goes last
-
-* Use predefined variables
+* <code>@include</code> goes last
 
 ```css
 .class {
@@ -95,27 +172,39 @@ Content
 ```
 
 <a name="media-queries"></a>
-3. Media queries
+5. Media queries
 ----------
 
-* Add media query @includes after other @includes and @extends
+* Add media query <code>@includes</code> after other <code>@includes</code> and <code>@extends</code>
 
 ```css
 .class {  
   background-color: $blue;
 
-  @include breakpoint-1() {
+  @include breakpoint(10em) {
   	background-color: $red;
   }
   
-  @include breakpoint-2() {
-  	background-color: $red;
+  @include breakpoint(20em) {
+  	background-color: $green;
+  }
+  
+  @include breakpoint($breakpoint) {
+  	background-color: $white;
   }
 }
 ```
 
+<a name="javascript"></a>
+6. Javascript
+----------
+
+* Don't use <code>.js-</code> for styling
+
+[See javascript guidelines](js-guidelines.md)
+
 <a name="exceptions-and-deviations"></a>
-4. Exceptions and deviations
+7. Exceptions and deviations
 ----------
 
 * You can nest two levels when using pseudo classes
