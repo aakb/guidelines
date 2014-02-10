@@ -1,11 +1,11 @@
-# Opsætning at lokalt udviklingsmiljø
+# Setting up your local webserver
 
 _Authored by Rasmus Frey_  
 _Created February 10 2014_
 
-Denne guide viser hvordan man opsætter et lokalt udviklingsmiljø på Mac OS-X Mavericks version 10.9.1.
+This guide demonstrates how you can setup a local webserver on Mac OS-X Mavericks version 10.9.1.
 
-Guiden udnytter den indbyggede webserver i OS-X.
+Guiden utilize the builtin apache on OS-X.
 
 ## Setting up Apache
 
