@@ -5,7 +5,7 @@ _Created February 10 2014_
 
 Denne guide viser hvordan man opsætter et lokalt udviklingsmiljø på Mac OS-X Mavericks version 10.9.1.
 
-Guide udnytter den indbyggede webserver i OS-X.
+Guiden udnytter den indbyggede webserver i OS-X.
 
 ## Setting up Apache
 
@@ -200,7 +200,7 @@ sudo apachectl restart
 1. Install MySQL
 
   ```
-  brew instal mysql
+  brew install mysql
   ```
   
 2. Make it more secure
