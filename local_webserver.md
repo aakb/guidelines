@@ -7,15 +7,22 @@ Guide udnytter den indbyggede webserver i OS-X.
 ## Opsætning Apache
 
 1. Opret Apache conf fil
- * Indtast følgende i din kommandolinje:
- ```Shell
- sudo nano /etc/apache2/users/USERNAME.conf
+ Indtast følgende i din kommandolinje:  
+ 
  ```
+ sudo nano /etc/apache2/users/USERNAME.conf
+ ```  
+ 
  Husk at erstat USERNAME med dit brugernavn (maskinnavnet)
+
 2. Kopier følgende ind i filen og gem:
-``` <Directory "/Users/USERNAME/Sites/">
-Options Indexes Multiviews
-AllowOverride AuthConfig Limit
-Order allow,deny
-Allow from all
-</Directory>```
+```
+<Directory "/Users/USERNAME/Sites/">
+  Options Indexes MultiViews FollowSymLinks
+  AllowOverride All
+  Order allow,deny
+  Allow from all
+</Directory>
+```
+
+3. 
