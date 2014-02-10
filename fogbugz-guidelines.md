@@ -82,7 +82,12 @@ En opgave tildeles yderligere en kategori for at indikere hvilken type af opgave
 
 Area vil altid være projektafhængig, her vælges det projektområde som opgave hører under. Er det f.eks. en opgave som relatere sig til blog feature så vælges dette område, eller er det vedr. søgning vælges dette.
 
-* Areas defineres på projektet.
+Areas defineres på projektet og kan f.eks. være:
+
+* Misc
+* Design
+* Development
+* Project Management
 
 ### Estimat:
 
@@ -93,7 +98,7 @@ Alle opgaver gives et estimat. Er opgave ikke estimeret på forhånd gøres dett
 * Når en opgave påbegyndes opdateres status.
 * Når en opgave afsluttes opdateres status og en evt. beskrivelse tilføjes.
 * Opgaven tildels en person hvis det vides hvem der skal løse denne, ellers unassigned.
-* Er en opgave helt afsluttet lukkes denne og tagges som oftes _faktureres_ samt tildeles _Martin Vellerup_
+* Er en opgave helt afsluttet lukkes denne og tagges _faktureres_. Opgaven tildeles blot _unassigned_
 
 ## Tidsregistrering
 
