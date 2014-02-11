@@ -6,7 +6,7 @@ This guide will explain the steps needed to setup Code Sniffer with Drupal codei
 
 1. Install codesniffer
 
-  ```
+  ```sh
   brew install php-code-sniffer
   ```
 2. Download [Drupal Coder Module](https://drupal.org/project/coder)
