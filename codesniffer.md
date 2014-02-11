@@ -3,11 +3,11 @@
 _Authored by Rasmus Frey_  
 _Created February 11 2014_
 
-This guide will explain the steps needed to setup Code Sniffer with Drupal codeing standards and PhpStorm.
+This guide will explain the steps needed to setup Code Sniffer with Drupal coding standards and PhpStorm.
 
 **IMPORTANT!** You need brew to perform this task, http://brew.sh/
 
-1. Install codesniffer
+1. Install code sniffer
 
   ```sh
   brew install php-code-sniffer
@@ -66,4 +66,4 @@ This guide will explain the steps needed to setup Code Sniffer with Drupal codei
   4. Apply and OK
 
 
-You should be ready to go. Open a Drupal module and make a codeing style error to be sure.
+You should be ready to go. Open a Drupal module and make a coding style error to be sure.
