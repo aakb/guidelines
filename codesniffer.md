@@ -1,5 +1,8 @@
 # Setting up Codesniffer
 
+_Authored by Rasmus Frey_  
+_Created February 11 2014_
+
 This guide will explain the steps needed to setup Code Sniffer with Drupal codeing standards and PhpStorm.
 
 **IMPORTANT!** You need brew to perform this task, http://brew.sh/
