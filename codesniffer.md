@@ -46,21 +46,21 @@ This guide will explain the steps needed to setup Code Sniffer with Drupal codei
 
 1. Tell PhpStorm where to find Code Sniffer
 
-  Go to Preferences -> PHP -> Code Sniffer
+  1. Go to Preferences -> PHP -> Code Sniffer
 
-  Paste this into PHP Code Sniffer (phpcs) path: **_/usr/local/bin/phpcs_**
+  2. Paste this into PHP Code Sniffer (phpcs) path: **_/usr/local/bin/phpcs_**
 
-  Validate and apply
+  3. Validate and apply
 
 2. Enable Code Sniffer inspection
 
-  Go to Preferences -> Inspections -> PHP -> PHP Code Sniffer validation
+  1. Go to Preferences -> Inspections -> PHP -> PHP Code Sniffer validation
   
-  Enable this
+  2. Enable this
 
-  Refresh coding standards, Drupal should pop up
+  3. Refresh coding standards, Drupal should pop up
 
-  Apply and OK
+  4. Apply and OK
 
 
 You should be ready to go. Open a Drupal module and make a codeing style error to be sure.
