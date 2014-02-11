@@ -40,7 +40,7 @@ This guide will explain the steps needed to setup Code Sniffer with Drupal codei
   ln -s ~/.drupal-coder/coder_sniffer/Drupal /usr/local/Cellar/php-code-sniffer/1.5.2/CodeSniffer/Standards/Drupal
   ```
 
-  *Important* Make sure you change _.drupal-coder_ in the above if you did not install coder in the suggested folder.
+  **Important** Make sure you change _.drupal-coder_ in the above if you did not install coder in the suggested folder.
 
 ## Configure PhpStorm
 
@@ -48,7 +48,7 @@ This guide will explain the steps needed to setup Code Sniffer with Drupal codei
 
   Go to Preferences -> PHP -> Code Sniffer
 
-  Paste this into PHP Code Sniffer (phpcs) path: *_/usr/local/bin/phpcs_*
+  Paste this into PHP Code Sniffer (phpcs) path: **_/usr/local/bin/phpcs_**
 
   Validate and apply
 
