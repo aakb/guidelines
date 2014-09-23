@@ -64,6 +64,9 @@ __Example__
 sass/
   base/
     _base.scss
+  base_modules
+    _base-button.scss
+    _base-list.scss
   layout/
     _layout.scss
   modules/
@@ -106,6 +109,22 @@ Naming are based (very) loosely on BEM. Module elements is separated with two da
 .search--field {
 }
 ```
+
+###Structue
+Structure the sass modules as logical patterns.
+
+   ### Folders
+   - Base: default base styles. Should be included in every project to set som reasonable defaults sitewide.
+   - Base-module: folder holding the default/fallback styles for all components in the project (and across projects).
+     This folder can be used as reference for developers, and should be very well documented on flow and usage (ToDo: Include clapping.mp3 as documentation resource).
+     This folder could be part of the boilerplate.
+   - Layout: Holds classes for the general page layout, often including the selectors that extend grid styles.
+   - Modules: Site specific styles extending patterns and adding custom code. Each module should have a logical and isolated usage.
+   - Pattern: Components should hold mostly if not only silent classes (%list, %list--item, %list--link etc.)
+   - Theme: For site specific default variables, mixins and global silent classes
+
+
+
 
 ### States
 If states are needed prefix it with <code>.is-</code>, <code>.has-</code> etc., also check out the [javascript guidelines](js-guidelines.md).
