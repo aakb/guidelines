@@ -116,7 +116,7 @@ Structure the sass modules as logical patterns.
    ### Folders
    - Base: default base styles. Should be included in every project to set som reasonable defaults sitewide.
    - Base-module: folder holding the default/fallback styles for all components in the project (and across projects).
-     This folder can be used as reference for developers, and should be very well documented on flow and usage (ToDo: Include clapping.mp3 as documentation resource).
+     This folder can be used as reference for developers, and should be very well documented on flow and usage.
      This folder could be part of the boilerplate.
    - Layout: Holds classes for the general page layout, often including the selectors that extend grid styles.
    - Modules: Site specific styles extending patterns and adding custom code. Each module should have a logical and isolated usage.
