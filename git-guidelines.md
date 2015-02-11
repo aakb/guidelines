@@ -1,4 +1,4 @@
-ITK Design - GIT guidelines
+ITK Design - GIT & Git-flow guidelines
 ==========
 
 This document is a guideline for using GIT with projects at ITK Design.
@@ -9,39 +9,84 @@ These are *guidelines*, and if you think it's necessary to deviate feel free to 
 * and [A successful Git branching model (Gitflow)](http://nvie.com/posts/a-successful-git-branching-model/)
 * and [Gitflow workflow](https://www.atlassian.com/git/workflows#!workflow-gitflow)
 
-Below is only summarized, so be sure to familiarize yourself with the above mentioned.
+Below is only summarized, so be sure to familiarize yourself with the above mentioned. For a visual summary see this [Cheat Sheet](http://danielkummer.github.io/git-flow-cheatsheet/). 
 
 Content
 ----------
 
 1. [Gitflow Workflow](#workflow)
-2. [Main Branches](#main)
-3. [Feature Branches](#feature)
-4. [Release Branches](#release)
-5. [Maintenance Branches](#maintenance)
-6. [Gitflow made visual](#visual)
-7. [Commit messages](#commit)
+2. [Branch Model](#branches)
+3. [Main Branches](#main)
+4. [Feature Branches](#feature)
+5. [Release Branches](#release)
+6. [Maintenance Branches](#maintenance)
+7. [Gitflow made visual](#visual)
+8. [Commit messages](#commit)
 
 <a name="workflow"></a>
-1. Gitflow Workflow
+1. Gitflow Workflow Setup
 ----------
 
-We use the gitflow workflow for our projects. It's a workflow utlizing a strict branching model around our project release. The model is similar to the [Feature Branch model](https://www.atlassian.com/git/workflows#!workflow-feature-branch) just more thorough.
+We use the gitflow workflow for our projects. It's a workflow utilizing a strict branching model around our project release. If you are unfamiliar with gitflow please read [Gitflow workflow](https://www.atlassian.com/git/workflows#!workflow-gitflow) and [A successful Git branching model (Gitflow)](http://nvie.com/posts/a-successful-git-branching-model/)
+
+### Install extension
+
+For convenience please install the [git flow extensions](https://github.com/nvie/gitflow): 
+
+<pre>$ brew install git-flow</pre> 
+
+If you don't use Mac / Homebrew please see the [installation instructions](https://github.com/nvie/gitflow/wiki/Installation)
+
+### Init
+
+Use the following command to set up a repository for gitflow:
+  <pre>$ git flow init</pre>
+  
+  You will be asked to define the specific setup. Please choose as follows:
+  
+  <pre>
+  Branch name for production releases: [master]
+  Branch name for "next release" development: [development]
+  How to name your supporting branch prefixes?
+  Feature branches? [feature/]
+  Release branches? [release/]
+  Hotfix branches? [hotfix/]
+  Support branches? [support/]
+  Version tag prefix? [v]
+  </pre>
+  
+### Daily Workflow
+
+1. Decide if the work your are doing belongs in af feature/* or hotfix/* branch. As a rule of thumb any tickets on the support board are hotfixes and tickets on the team board/project boards are features.
+2. Make a new branch from either master (hotfix) or development (feature)
+3. Fix/implement and commit the required changes
+4. Complete your branch as described below
+
+_Never work directly in either master or development_ 
+
+
+<a name="branches"></a>
+2. Branch Model
+----------
 
 <a name="main"></a>
-2. Main Branches
-----------
+1. Main Branches
 
-We use to main branches to store our project history, these branches have an infinite lifetime.
 
-* master
-* development
+We use to main branches to store our project history, these branches have an _infinite lifetime_.
 
-The master branch stores the official release history, and the development branch serves as an integration branch for features.
+* master (stores the official release history)
+* development (serves as an integration branch for features)
 
-Work and branching out takes place from development branch and everytime a merge back to master is done it by definition a new production release.
+It's convenient to tag all commits in the master branch with a version number eg. 'v1.1.0'
 
-It's convenient to tag all commits in the master branch with a version number.
+Further we use the following temporary branch types:
+
+* feature/* (Each new feature gets a dedicated feature branch)
+* release/* (Collection of completed features ready to be launched)
+* hotfix/*  (For fixing bugs in code deployed to production) 
+
+Temporary branches should always be deleted after completion. 
 
 <a name="feature"></a>
 3. Feature Branches
@@ -51,23 +96,54 @@ New features should reside in its own branch, which can then be pushed to the ce
 
 Of course not everything need a feature branch. As a rule of thumb we allways branch out into a feature branch when work is to stretch out over several hours/days or when the work needs to be isolated and/or tested individually.
 
-Conventions:
+**Conventions:**
 
 * branch off: development
 * merge into: development
-* naming convention: anything except master, development, release-*, or hotfix-*
+* naming convention: feature/*
+
+**Commands:**
+
+Start a new feature using:
+
+<pre>$ git flow feature start [name]</pre>
+
+this will create a new branch called feature/[name] based on development branch and git-flow automatically switch to it. Now when you’re done, just finish it using:
+
+<pre>$ git flow feature finish [name]</pre>
+ 
+It’ll merge feature/[name] back to develop and delete the feature branch.
+
+If others need to work on the same feature you need to publish (push to origin) your feature branch:
+
+<pre>$ git flow feature publish [name]</pre>
+
+To work on a feature branch started by someone else you need to pull it:
+
+<pre>$ git flow feature pull [name]</pre>
 
 <a name="release"></a>
 4. Release Branches
 ----------
 
-When enough features have been accomulated into the development branch a release branch i created. A release branch is not strictly needed as development could be merged directly into master branch. So we only create the release branch if we need to use it for final adjustments or demonstration before merging it into master.
+When enough features have been accumulated into the development branch a release branch is created. While this might seem redundant for smaller updates it ensures that we can always develop/test/launch/roolback with out issues. 
 
-Conventions:
+**	Conventions:**
 
 * branch off: development
-* merge into: master
-* naming convention: release-* or release/*
+* merge into: master, development
+* naming convention: release/*
+
+**Commands:**
+
+To list/start/finish release branches, use:
+<pre>
+$ git flow release
+$ git flow release start [name]
+$ git flow release finish [name]
+</pre>
+
+When you finish a release branch, it’ll merge your changes to master and back to develop, also git-flow will create a tag for this release.
 
 <a name="maintenance"></a>
 5. Maintenance Branches
@@ -75,13 +151,22 @@ Conventions:
 
 Maintenance or "hotfix" branches are used to quickly patch production releases. This is the only branch that can and should branch out directly of master. As soon as the fix is complete, it should be merged into both master and development (or the current release branch), and master should be tagged with an updated version number.
 
-We do allow hotfixes do be done directly on development branch as long as it won't interfer with any ongoing additional work and you have to fix something small quickly.
-
-Conventions:
+**Conventions:**
 
 * branch off: master
 * merge into: development and master
-* naming convention: hotfix-*
+* naming convention: hotfix/[issue#]
+
+**Commands:**
+
+To list/start/finish release branches, use:
+<pre>
+$ git flow hotfix
+$ git flow hotfix start [name]
+$ git flow hotfix finish [name]
+</pre>
+
+When you finish a release branch, it’ll merge your changes to master and back to develop.
 
 <a name="visual"></a>
 6. Visual view of Gitflow model
@@ -90,8 +175,22 @@ Conventions:
 ![gitflow](assets/git-workflow-gitflow.png "Gitflow, image taken from atlassian.com")  
 image courtesy of atlassian.com
 
+<a name="devsetup"></a>
+7. Mapping git flow to our dev setup
+----------
+
+In a typical project the various branches will map to our development setup as follows:
+
+| Branch        | Server        | Notes  |
+| ------------- | ------------- | ------ |
+| Master        | prod          | -      |
+| Development   | dev           | -      |
+| Release       | stg           | -      |
+| Feature       | vagrant       | -      |
+| Hotfix        | vagrant / stg | Optionally test on stg before deploying to prod      | 
+
 <a name="commit"></a>
-7. Writing good commit messages
+8. Writing good commit messages
 ----------
 
 Good commit messages serve three important purposes:
