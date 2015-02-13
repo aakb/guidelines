@@ -55,6 +55,11 @@ Use the following command to set up a repository for gitflow:
   Version tag prefix? [v]
   </pre>
   
+### Start work on project
+
+1.	Clone/create repository
+2. Initialize repository for Git flow using above settings (Note: Git flow is an entirely local setting - it needs to be done each time you clone/create)
+
 ### Daily Workflow
 
 1. Decide if the work your are doing belongs in af feature/* or hotfix/* branch. As a rule of thumb any tickets on the support board are hotfixes and tickets on the team board/project boards are features.
@@ -78,7 +83,7 @@ We use to main branches to store our project history, these branches have an _in
 * master (stores the official release history)
 * development (serves as an integration branch for features)
 
-It's convenient to tag all commits in the master branch with a version number eg. 'v1.1.0'
+It's convenient to tag all merges to the master branch with a version number eg. 'v1.1.0'
 
 Further we use the following temporary branch types:
 
@@ -94,8 +99,6 @@ Temporary branches should always be deleted after completion.
 
 New features should reside in its own branch, which can then be pushed to the central repository. Never branch off of master, feature branches use development as their parent. When a feature is completed, it is merged back into development. Feature branches should never interact directly with master.
 
-Of course not everything need a feature branch. As a rule of thumb we allways branch out into a feature branch when work is to stretch out over several hours/days or when the work needs to be isolated and/or tested individually.
-
 **Conventions:**
 
 * branch off: development
@@ -107,6 +110,12 @@ Of course not everything need a feature branch. As a rule of thumb we allways br
 Start a new feature using:
 
 <pre>$ git flow feature start [name]</pre>
+
+Ex: 
+
+<pre>$ git flow feature start split-screen</pre>
+
+Will create a branch called "feature/spli-screen
 
 this will create a new branch called feature/[name] based on development branch and git-flow automatically switch to it. Now when you’re done, just finish it using:
 
@@ -128,13 +137,15 @@ To work on a feature branch started by someone else you need to pull it:
 
 When enough features have been accumulated into the development branch a release branch is created. While this might seem redundant for smaller updates it ensures that we can always develop/test/launch/roolback with out issues. 
 
-**	Conventions:**
+**Conventions:**
 
 * branch off: development
 * merge into: master, development
 * naming convention: release/*
 
 **Commands:**
+
+**Caution!** Finishing a release merges to master. Do not do this until the release is ready to deploy to prod!
 
 To list/start/finish release branches, use:
 <pre>
