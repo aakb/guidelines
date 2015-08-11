@@ -19,7 +19,7 @@ Your vagrant machine should have Selenium, Behat, Behat Drupal Extension and a h
 script for aakb/dokk1 can be used as reference for installing/updating your vagrant box. 
 
 To start Selenium vagrant ssh in a seperate terminal and type 'sel-start'. Wait a few seconds for the "INFO - Selenium Server 
-is up and running" message to appear. To confirm selenium is running visit http://dokk1.vm:4444/wd/hub/session in a browser - 
+is up and running" message to appear. To confirm selenium is running visit http://vm-name.vm:4444/wd/hub/session in a browser - 
 it should give you json response.
 
 Once the Selenium server is running you can run the tests from the sites/all/tests directory. In a different terminal 
@@ -32,5 +32,5 @@ Gotcha's specific to the Behat Drupal Extention
 
 * If you see unexpected errors in your tests run 'drush updb' to ensure schema is up to data.
 * If you see unexpected login errors in your tests make sure that the user role you are testing has the "Use the administration toolbar" permission. 
-  The Drupal Behat Extension looks for "Log out" text on the page to check if the user is logged in, since the Dokk-theme doesn't show this the admin toolbar
-  is required to make the tests work.
+  The Drupal Behat Extension looks for "Log out" text on the page to check if the user is logged in, if the theme/site you're testing doesn't 
+  show by itself this the admin toolbar is required to make the tests work.
