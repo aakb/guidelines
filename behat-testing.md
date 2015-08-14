@@ -32,7 +32,7 @@ Gotcha's specific to the Behat Drupal Extention
 
 * Use the machine name for the content type when creating content.
 * In tables use machine name for fields / In "fill in" syntax use name of field!
-* @Transfeer doesn't effect data in tables
+* @Transform doesn't effect data in tables
 * If you see unexpected errors in your tests run 'drush updb' to ensure schema is up to data.
 * If you see unexpected login errors in your tests make sure that the user role you are testing has the "Use the administration toolbar" permission. 
   The Drupal Behat Extension looks for "Log out" text on the page to check if the user is logged in, if the theme/site you're testing doesn't 
