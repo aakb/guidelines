@@ -32,7 +32,8 @@ Gotcha's specific to the Behat Drupal Extention
 
 * Use the machine name for the content type when creating content.
 * In tables use machine name for fields / In "fill in" syntax use name of field!
-* @Transform doesn't effect data in tables
+* @Transform defined with regex doesn't effect data in tables
+* To transform tables use @Transform table:field1,field2,etc.
 * If you see unexpected errors in your tests run 'drush updb' to ensure schema is up to data.
 * If you see unexpected login errors in your tests make sure that the user role you are testing has the "Use the administration toolbar" permission. 
   The Drupal Behat Extension looks for "Log out" text on the page to check if the user is logged in, if the theme/site you're testing doesn't 
@@ -44,3 +45,5 @@ Debug tricks
 * And Break - insert into scenario to halt execution, allows you to inspect state in Drupal
 * And print last response - output the last response in the terminal
 * @debug / "behat --tags @debug" - Tag your scenarios with a custom tag, e.g. @debug, and the "--tags @debug" to limit how many scenarios are run
+* For hints on setting up behat with PHPStorm see https://www.deeson.co.uk/labs/executing-drupal-behat-tests-vagrant-within-phpstorm
+* Read [the code for DrupalContext](https://github.com/jhedstrom/drupalextension/blob/master/src/Drupal/DrupalExtension/Context/DrupalContext.php) to see all available steps and how they are implemented 
