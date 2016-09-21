@@ -12,8 +12,10 @@ Is it configured? Should we use it?
 Is it configured? Should we use it?
 
 #### Google Analytics
+Should we use it?
 
 #### Site Improve
+Should we use it?
 
 #### Browser-/deviceoptimering
 
