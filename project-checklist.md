@@ -12,3 +12,20 @@ Is it configured? Should we use it?
 #### Google Analytics
 
 #### Site Improve
+
+#### Browser-/deviceoptimering
+
+#### PageSpeed Tools
+What does https://developers.google.com/speed/pagespeed/ have to say about our site/system?
+
+#### Google Webmaster Tools & sitemap
+Should we use Google Webmaster Tools and setup a sitemap?
+
+#### Backup
+Is the site/system backed up?
+
+#### Domain name / DNS
+Is the domain name registreret and the DNS prepared for launch?
+
+#### Accessibility
+Can we take measures to make sure the site/system is WCAG 2.0 compliant?
