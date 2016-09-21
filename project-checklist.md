@@ -1,4 +1,6 @@
-This is a project checklist, with things we should consider in all projects.
+# Project checklist
+
+This is a project checklist, with things we should consider in all projects. Feel free to add to this list.
 
 #### Favicon
 This should be a minor task as long as the site/system has some kind of identity. We should consider making favicons for all devices and have an easy guide for doing so.
@@ -29,3 +31,6 @@ Is the domain name registreret and the DNS prepared for launch?
 
 #### Accessibility
 Can we take measures to make sure the site/system is WCAG 2.0 compliant?
+
+#### Search engine optimization
+Should we consider SEO?
