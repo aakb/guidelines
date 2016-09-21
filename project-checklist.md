@@ -5,34 +5,35 @@ This is a project checklist, with things we should consider in all projects. Fee
 #### Favicon
 This should be a minor task as long as the site/system has some kind of identity. We should consider making favicons for all devices and have an easy guide for doing so.
 
-#### Memcached
+##### Memcached
 Is it configured? Should we use it?
 
-#### Varnish
+##### Varnish
 Is it configured? Should we use it?
 
-#### Google Analytics
+##### Google Analytics
 Should we use it?
 
-#### Site Improve
+##### Site Improve
 Should we use it?
 
-#### Browser-/deviceoptimering
+##### Browser-/device optimization
+What browsers and devices are relevant? How and who (the customer) should test?
 
-#### PageSpeed Tools
+##### PageSpeed Tools
 What does https://developers.google.com/speed/pagespeed/ have to say about our site/system?
 
-#### Google Webmaster Tools & sitemap
+##### Google Webmaster Tools & sitemap
 Should we use Google Webmaster Tools and setup a sitemap?
 
-#### Backup
+##### Backup
 Is the site/system backed up?
 
-#### Domain name / DNS
+##### Domain name / DNS
 Is the domain name registreret and the DNS prepared for launch?
 
-#### Accessibility
+##### Accessibility
 Can we take measures to make sure the site/system is WCAG 2.0 compliant?
 
-#### Search engine optimization
+##### Search engine optimization
 Should we consider SEO?
