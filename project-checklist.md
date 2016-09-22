@@ -59,3 +59,25 @@ Can we take measures to make sure the site/system is WCAG 2.0 compliant?
 
 #### Search engine optimization
 Should we consider SEO?
+
+--
+
+#### What API keys do we need
+Get all API Keys required for the project
+
+--
+
+#### What site email Adress
+Get the customers site email adress, for receiving notifications.
+
+--
+
+#### Social media
+What social media integrations does the customer want.
+
+--
+
+#### User roles
+What kind of permission hierarki shall the site reflect. (Admin/Editor/Blog editor) One role for all?
+
+#### Content
