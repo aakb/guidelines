@@ -84,3 +84,14 @@ What kind of permission hierarki shall the site reflect. (Admin/Editor/Blog edit
 
 #### GitHub (code repository in general)
 Do we have the right branches in place? And tags? And version numbers?
+
+--
+
+#### Drupal
+ * Enable page cache, block cache, JS minify, CSS minify etc.
+ * Disable update
+ * Disable dblog
+ * Enable syslog + syslog config
+ * Memcache conf (settings.php)
+ * Fast 404 page
+ * Fast file not found (no need to bootstrap drupal)
