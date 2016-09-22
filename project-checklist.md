@@ -79,3 +79,8 @@ What social media integrations does the customer want.
 
 #### User roles
 What kind of permission hierarki shall the site reflect. (Admin/Editor/Blog editor) One role for all?
+
+--
+
+#### GitHub (code repository in general)
+Do we have the right branches in place? And tags? And version numbers?
