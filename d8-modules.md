@@ -46,22 +46,6 @@ Or require a particular module from the list below:
 
     composer require drupal/itk-user-pages-theme
 
-## Tools
-
-### Drush (Tool - Ships with drupal-composer/drupal-project)
-    composer require drush/drush
-A tool to do simple drupal tasks from command line.
-
-### Drupal console (Tool - Ships with drupal-composer/drupal-project)
-    composer require drupal/console
-Another shell tool that can perform more complex tasks such as
-  * Auto generate code for controllers
-  * Auto generate code for plugins
-  * Generate dummy content
-  * Debugging
-
-And many other @ https://drupalconsole.com/cheatsheet/#
-
 ## Contrib themes
 
 ### Adminimal theme (Contrib theme)
@@ -149,3 +133,19 @@ Provides a few admin links to editor in the front end.
 Provides admin theme on user pages for anonymous users
 
 **Use when:** You want to use the admin theme for login pages and password request pages.
+
+## Tools
+
+### Drush (Tool - Ships with drupal-composer/drupal-project)
+    composer require drush/drush
+A tool to do simple drupal tasks from command line.
+
+### Drupal console (Tool - Ships with drupal-composer/drupal-project)
+    composer require drupal/console
+Another shell tool that can perform more complex tasks such as
+  * Auto generate code for controllers
+  * Auto generate code for plugins
+  * Generate dummy content
+  * Debugging
+
+And many other @ https://drupalconsole.com/cheatsheet/#
