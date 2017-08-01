@@ -12,7 +12,7 @@ https://www.dropbox.com/preview/Dev%20Team/Processer%20og%20overblik/Procesbeskr
 ## Fetch some or all of the modules described below
 Add the ITK packagist to composer repositories array:
 
-    composer config repositories composer https://packagist.etek.dk
+    composer config repositories.itk composer https://packagist.etek.dk
 
 Require the latest version of all modules described in this document with composer:
 
