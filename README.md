@@ -9,3 +9,4 @@ Guidelines for developing websites in the ITK organization
 * [GIT guidelines] (git-guidelines.md)
 * [CSS guidelines] (css-guidelines.md)
 * [Javascript guidelines] (js-guidelines.md)
+* [D8 Module guidelines] (d8-modules.md)
