@@ -1,7 +1,12 @@
-Guidelines
-==========
+# ITK DevTeam - Guidelines
 
-Guidelines for developing websites in the ITK organization
+## Drupal
+
+* [Byg et Drupal 8-site](docs/drupal8-build-a-site.md)
+
+
+
+## Old Guidelines for developing websites in the ITK organization
 
 * [Fogbugz guidelines] (fogbugz-guidelines.md)
 * [Code of Conduct] (code-of-conduct.md)
