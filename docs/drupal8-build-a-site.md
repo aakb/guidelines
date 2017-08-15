@@ -36,7 +36,7 @@ composer require drupal/pathauto
 ```
 
 Efterfølgende kan følgende dokument bruges som reference til hvilke moduler vi ofte anvender:
-[github.com/aakb/guidelines/blob/master/d8-modules.md](https://github.com/aakb/guidelines/blob/master/d8-modules.md)
+[github.com/aakb/guidelines/blob/master/d8-modules.md](d8-modules.md)
 
 ## Regel 3 – Drupal opdateringer
 
