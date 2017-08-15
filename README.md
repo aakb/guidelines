@@ -12,5 +12,4 @@
 * [GIT guidelines](docs/git-guidelines.md)
 * [CSS guidelines](docs/css-guidelines.md)
 * [Javascript guidelines](docs/js-guidelines.md)
-* [D8 Module guidelines](docs/d8-modules.md)
 * [Project checklist](docs/project-checklist.md)
