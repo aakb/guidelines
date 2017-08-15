@@ -1,5 +1,13 @@
 # Tools
 
+## Installation
+
+```sh
+npm install
+```
+
+## Use
+
 Lint all Markdown files:
 
 ```sh
