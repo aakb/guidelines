@@ -25,13 +25,13 @@ grundstruktur til sitet, som er anderledes end sædvanligt.
 
 Drupal core og vendor packages installeres med:
 
-```
+```sh
 composer create-project drupal-composer/drupal-project:8.x-dev [some-dir] --stability dev --no-interaction
 ```
 
 Alle afhængigheder styres i composer.json i roden af projektet. Alle contrib moduler installeres med composer. F.eks.:
 
-```
+```sh
 composer require drupal/pathauto
 ```
 
@@ -42,25 +42,25 @@ Efterfølgende kan følgende dokument bruges som reference til hvilke moduler vi
 
 For at opdatere et Drupal core bruges composer. F.eks.:
 
-```
+```sh
 composer update drupal/core --with-dependencies
 ```
 
 For at opdatere et contrib modul bruges:
 
-```
+```sh
 composer update drupal/[MODULE_NAME]
 ```
 
 For at slette et contrib modul bruges:
 
-```
+```sh
 composer remove drupal/[MODULE_NAME]
 ```
 
 Bemærk: Modulet skal deaktiveres i Drupal før det slettes. Eksempelvis med Drush:
 
-```
+```sh
 drush pm-uninstall [MODULE_NAME]
 ```
 
@@ -90,7 +90,7 @@ Først køres composer install fra roden af projektet.
 
 Sitet installeres med drush site-install, med parameteren `--config-dir=[PATH TO CONFIG DIR]`:
 
-```
+```sh
 drush --yes site-install minimal --db-url='mysql://[USER]:[PASSWORD]@localhost/db' --account-name=admin --account-mail=[ACCOUNT_EMAIL] --config-dir=/vagrant/htdocs/config/sync
 ```
 
