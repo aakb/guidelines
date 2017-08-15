@@ -1,151 +1,102 @@
-Drupal 8 - common modules and tools
-==========
-Contains a list of D8 modules and tools that we often use and have knowledge about.
+# Opdateringer i Drupal 8
 
-Use this document as a reference, when creating new projects. Both as a reminder of
-things to consider when building new sites, and as a reference of which modules
-to use to solve a particular use case. See Drupal 8 workflow description in Dropbox
-for more information on setting up new drupal 8 sites:
+**Metodeansvarlig**: Martin Yde Granath
 
-https://www.dropbox.com/preview/Dev%20Team/Processer%20og%20overblik/Procesbeskrivelser/Proces%20Drupal%208.docx
+## Overordnet formål
+At dokumentere en simpel metode til opdatering af drupal 8 løsninger.
 
-## Fetch some or all of the modules described below
-Add the ITK packagist to composer repositories array:
-
-    composer config repositories.itk composer https://packagist.etek.dk
-
-Require the latest version of all modules described in this document with composer:
-
-    composer require drupal/adminimal_theme drupal/pathauto drupal/field_group drupal/metatag drupal/redirect drupal/toolbar_visibility drupal/role_delegation drupal/paragraphs drupal/youtube drupal/itk_media_entity drupal/itk_cookie_message drupal/itk-admin-links drupal/itk-user-pages-theme
-
-Or require a particular module from the list below:
-
-    composer require drupal/adminimal_theme
-
-    composer require drupal/pathauto
-
-    composer require drupal/field_group
-
-    composer require drupal/metatag
-
-    composer require drupal/redirect
-
-    composer require drupal/toolbar_visibility
-
-    composer require drupal/role_delegation
-
-    composer require drupal/paragraphs
-
-    composer require drupal/youtube
-
-    composer require drupal/itk_media_entity
-
-    composer require drupal/itk_cookie_message
-
-    composer require drupal/itk-admin-links
-
-    composer require drupal/itk-user-pages-theme
-
-## Contrib themes
-
-### Adminimal theme (Contrib theme)
-    composer require drupal/adminimal_theme
-The Seven theme with a bit more fancyness.
-
-**Use when:** You want to give the backend theme a makeover.
-
-## Contrib modules
-
-### Pathauto (Contrib module)
-    composer require drupal/pathauto
-Provides a mechanism for modules to automatically generate aliases for the content they manage.
-
-**Use when:** You want to modify the urls of your site and set up automation for url generation.
-
-### Field group (Contrib module)
-    composer require drupal/field_group
-Provides the ability to group your fields on both form and display.
-
-**Use when:** You want to better structure your forms for editors and group certain fields into wrappers.
-
-### Metatag (Contrib module)
-    composer require drupal/metatag
-Manage meta tags for all entities.
-
-**Use when:** you want to configure metatags for the entities on your site.
-
-### Redirect (Contrib module)
-    composer require drupal/redirect
-Allows users to redirect from old URLs to new URL.
-
-**Use when:** You want to modify the urls of your site and set up automation for url generation.
-
-### Toolbar visibility (Contrib module)
-    composer require drupal/toolbar_visibility
-Choose theme to show the toolbar
-
-**Use when:** You want to hide the toolbar in the frontend.
-
-### Role delegation (Contrib module)
-    composer require drupal/role_delegation
-Allows site administrators to grant some roles the authority to assign selected roles to users.
-
-**Use when:** You want a more granular control of which users can grant permissions to other users.
-This is often relevant when your site uses multiple roles.
-
-### Paragraphs (Contrib module)
-    composer require drupal/paragraphs
-Enables the creation of paragraphs entities.
-
-**Use when:** You want to structure your content into different types of paragraphs.
-Paragraph module is also useful when your want to create a multivalue field with multiple inputs for each value.
+## Afgrænsning af metode
+* Antager at sitet er bygget med composer. Se Drupal 8 processbeskrivelse.
+* Antager at site alias og site scripts eksisterer og er ensrettet.
+* Antager at dev site og prod site er placeret på enten atea eller linode servere.
+* Antager at en lokal vagrant løsning eksisterer.
 
 
-### Youtube (Contrib module)
-    composer require drupal/youtube
-Defines a YouTube video and thumbnail field type.
+## Regel 1 - Forberedelse
+Opdater dit lokale miljø før der foretages nogle ændringer:
+```
+git checkout master
+git pull
+drush pull-prod
+```
 
-**Use when:** You want to attach a youtube video to your content.
+## Regel 2 - Opdatering:
+Opret ny hotfix branch:
 
-## Custom modules
-### ITK media entity (Custom module)
-    composer require drupal/itk_media_entity
-An ITK Media entity configuration
-A suite of contrib and core modules that provide a media library solution.
-Includes a minimal configuration setup to provide a configuration base and an example of usage.
+    git checkout –b hotfix/[name]
 
-**Use when:** You want more control of your media than what drupal core provides.
+Opdatér kode lokalt:
 
-### ITK cookie message (Custom module)
-    composer require drupal/itk_cookie_message
-A cookie compliance module
+    composer update
 
-**Use when:** Your site is open to public and must have a cookie compliance popup.
+Opdatér database og eksportér ny konfiguration:
+```
+drush updb
+drush entup
+drush config-export
+```
 
-### ITK admin links (Custom module)
-    composer require drupal/itk-admin-links
-Provides a few admin links to editor in the front end.
+Opdatér sprogpakker:
 
-**Use when:** You hide the admin toolbar in front end (See: Toolbar visibility above)
+```
+drush locale-check
+drush locale-update
+drush cr
+```
 
-### ITK user pages theme (Custom module)
-    composer require drupal/itk-user-pages-theme
-Provides admin theme on user pages for anonymous users
+Opdatér CHANGELOG.md
+Push ny kode til github:
+```
+git commit …
+git push –u origin hotfix/[name]
+```
 
-**Use when:** You want to use the admin theme for login pages and password request pages.
+## Regel 5 - UPDATE-README.md fil
+Undersøg om projectets document root indeholder en UPDATE-README.md fil med yderligere projektspecifikke instrukser i forbindelse med updates. Udfør i så fald disse instrukser.
 
-## Tools
+## Regel 6 – Test
+Push branchen til et development site og kør tests.
 
-### Drush (Tool - Ships with drupal-composer/drupal-project)
-    composer require drush/drush
-A tool to do simple drupal tasks from command line.
+Omfanget af tests varierer imellem sites. Mindre sites med få brugere og mindre supportaftale får mindre tid til test.
+Beslutningen om hvilke tests der skal køres foretages af projektledelsen. Men i udgangspunktet bør alle tilgængelige automatiske tests køres.
 
-### Drupal console (Tool - Ships with drupal-composer/drupal-project)
-    composer require drupal/console
-Another shell tool that can perform more complex tasks such as
-  * Auto generate code for controllers
-  * Auto generate code for plugins
-  * Generate dummy content
-  * Debugging
+Mulighederne for tests indbefatter:
+* Manual tests
+* Visual regression tests
+* Unit tests
+* Integration tests
+* Behat
 
-And many other @ https://drupalconsole.com/cheatsheet/#
+## Regel 7 - Release:
+Når testansvarlig har godkendt opdateringen er den klar til release.
+
+Fra local document root:
+```
+git checkout develop
+git merge –no-ff hotfix/update-[name]
+git push develop
+git checkout master
+git merge –no-ff hotfix/update-[name]
+git push master
+git tag [version number]
+git push origin [version number]
+```
+
+Fra prod document root:
+```
+git fetch –-tags
+git checkout [version number]
+```
+
+Opdatér db:
+```
+drush updb
+drush entup
+drush config-import
+```
+Opdatér sprogpakker:
+```
+drush locale-check
+drush locale-update
+drush cr
+```

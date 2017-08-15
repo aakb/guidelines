@@ -23,12 +23,12 @@ Eksempelvis:
     ITK-123: Added ITK stuff
 
 * Det faste format sikrer at der oprettes en reference til det pågældende commit i JIRA
-* Forsøg for så vidt muligt at avende keywords: Added, Removed, Changed, "Updated", "Changed" for at afhjælpe en evt. search i gamle commitbeskeder.
+* Forsøg for så vidt muligt at anvende keywords: "Added", "Removed", "Changed", "Updated", "Fixed" for at afhjælpe en evt. search i gamle commitbeskeder.
 * Skriv beskeder i det grammatiske format kort tillægsform så det antyder at det er blevet tilføjet tidligere.
 
 ## Regel 3
-* Alle projekter skal have en Master og en Develop branch ved oprettelse af nye repositories. (Kan foretages i Github UI eller pushes fra localt miljø)
-* Default branchen skal være Develop (Kan foretages i Github UI eller pushes fra localt miljø)
+* Alle projekter skal have en Master og en Develop branch ved oprettelse af nye repositories. (Kan foretages i Github UI eller pushes fra lokalt miljø)
+* Default branchen skal være Develop (Kan foretages i Github UI eller pushes fra lokalt miljø)
 * Ved oprettelse af nye projekter på Github skal projektets beskrivelsesfelt udfyldes.
 
 ## Regel 4

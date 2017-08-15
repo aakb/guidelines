@@ -35,7 +35,7 @@ Opdatér Drupal med drush.
 Opdatér changelog med ændringer.
 
 ## Regel 5 - UPDATE-README.md fil
-Undersøg om projectets document root indeholder en UPDATE-README.md fil med yderligere projektspecifikke instrukser iforbindelse med updates. Udfør i så fald disse instrukser.
+Undersøg om projectets document root indeholder en UPDATE-README.md fil med yderligere projektspecifikke instrukser i forbindelse med updates. Udfør i så fald disse instrukser.
 
 ## Regel 4 – Test
 Push branchen til et development site og kør tests.
