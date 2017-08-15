@@ -8,6 +8,10 @@
 * [Drupal 8 opdateringer](docs/d8-updates.md)
 * [GIT guidelines](docs/git-guidelines.md)
 
+## Projektledelse
+
+* [Arkitekturtegninger](docs/architectures.md)
+
 ## Old Guidelines for developing websites in the ITK organization
 
 * [Behat testing guidelines](docs/behat-testing.md)
