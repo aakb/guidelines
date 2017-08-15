@@ -5,9 +5,7 @@ Contains a list of D8 modules and tools that we often use and have knowledge abo
 Use this document as a reference, when creating new projects. Both as a reminder of
 things to consider when building new sites, and as a reference of which modules
 to use to solve a particular use case. See Drupal 8 workflow description in Dropbox
-for more information on setting up new drupal 8 sites:
-
-https://www.dropbox.com/preview/Dev%20Team/Processer%20og%20overblik/Procesbeskrivelser/Proces%20Drupal%208.docx
+for more information on setting up new drupal 8 sites : [Byg et Drupal 8-site](drupal8-build-a-site.md)
 
 ## Fetch some or all of the modules described below
 Add the ITK packagist to composer repositories array:
