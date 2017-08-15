@@ -1,4 +1,4 @@
-Drupal 8 modules guidelines
+Drupal 8 - common modules and tools
 ==========
 Contains a list of D8 modules and tools that we often use and have knowledge about.
 
