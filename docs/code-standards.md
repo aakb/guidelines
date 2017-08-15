@@ -17,7 +17,7 @@ The guidelines should help achieve:
 * The best possible conditions for the individual website to customize
   configuration and appearance
 
-**When working with a open source community project like Ding**
+## When working with a open source community project like Ding
 
 Contributions to the core project will be reviewed by members of the
 core team. These guidelines should inform contributors about what to

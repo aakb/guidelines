@@ -49,7 +49,7 @@ immediately before the code line or block they reference
 //Unselect all other checkboxes.
 ```
 
-## Functions, loops etc.
+## Functions, loops and other stuff
 
 See [Drupal's JavaScript coding standards](https://drupal.org/node/172169).
 
