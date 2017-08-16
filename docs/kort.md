@@ -27,8 +27,8 @@ CARTO hvorefter [(CARTO) Builder](https://carto.com/builder/) kan
 bruges til at lave flotte og illustrative kortvisninger. Kortet kan
 garneres med diverse
 "[widgets](https://carto.com/learn/guides/widgets/exploring-widgets)"
-som fx gør det muligt for websitebrugeren filtre og søge i det viste
-data.
+som fx gør det muligt for websitebrugeren filtrere og søge i data der
+vises på kortet.
 
 En person med teknisk snilde, men som ikke nødvendigvis er programmør,
 kan nemt lave tilpasninger i Builder og designe den ønskede
@@ -36,12 +36,15 @@ præsentation af data.
 
 #### Visning af kort fra CARTO
 
-Kort designet i Builder kan efterfølgende indsættes på en webside via et
+Kort designet i Builder kan indsættes på en webside via et
 `iframe`-element der viser kortet som det er designet i Builder.
 
 Man kan også indsætte kort fra CARTO via JavaScript, men så får man
-kun rå kortdata, dvs. widgets mm. vises ikke automatisk.
+kun rå kortdata, dvs. widgets og lignende vises ikke automatisk.
 
 ### Skræddersyede løsninger
 
-@TODO
+Hvis CARTO ikke kan løse kundens behov kan vi lave skræddersyede
+kortløsninger. Disse løsninger vil typisk være baseret på JavaScript
+og et passende bibliotek, fx [OpenLayers](https://openlayers.org/),
+men de nærmere detaljer afhænger af projektet krav og omfang.
