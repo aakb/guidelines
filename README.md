@@ -12,6 +12,16 @@
 
 * [Arkitekturtegninger](docs/architectures.md)
 
+## Front-end
+
+* [Design - Sketch](docs/design_sketch.md)
+* [Design - Prototype i InVision](docs/design_prototype-invision.md)
+* [Design - Aflevering til kunden](docs/design_aflevering-til-kunden.md)
+* [Design - Aflevering til udvikling](docs/design_aflevering-til-udvikling.md)
+* [Framework](docs/front-end_framework.md)
+* [Gulp](docs/front-end_gulp.md)
+* [npm](docs/front-end_npm.md)
+
 ## Old Guidelines for developing websites in the ITK organization
 
 * [Behat testing guidelines](docs/behat-testing.md)
