@@ -4,7 +4,7 @@
 
 __Metodeansvarlig__: Troels Ugilt Jensen
 
-__Overordnet formål__: Få en ensartet måde at bygge nye Symfony sites op.
+__Overordnet formål__: Få en ensartet måde at bygge nye Symfony sites på.
 
 __Afgrænsning af metode__: Dette handler om hvordan vi ensretter vores opbygning
 af Symfony sites, ikke compile scripts, osv.
@@ -23,9 +23,9 @@ Eksterne afhængigheder (Bundles) installeres med composer:
 composer require [bundle]
 ```
 
-## Regel 3 - Typisk setup
+## Regel 3 - Doctrine
 
-Vi bygger Symfony sites med Doctrine:
+Vi bygger Symfony entities med Doctrine:
 [http://www.doctrine-project.org/](http://www.doctrine-project.org/)
 
 Se:
@@ -48,3 +48,7 @@ bin/console doctrine:migrations:diff
 
 Se andre kommandoer her:
 [http://symfony.com/doc/master/bundles/DoctrineMigrationsBundle/index.html#usage](http://symfony.com/doc/master/bundles/DoctrineMigrationsBundle/index.html#usage)
+
+## Regel 5 - ofte brugte moduler
+
+* FosUserBundle
