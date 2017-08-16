@@ -6,11 +6,18 @@
 * [Drupal 8 standard moduler](docs/d8-modules.md)
 * [Drupal 7 opdateringer](docs/d7-updates.md)
 * [Drupal 8 opdateringer](docs/d8-updates.md)
-* [GIT guidelines](docs/git-guidelines.md)
+
+## Symfony
+
+* [Byg et Symfony site](docs/symfony-build-a-site.md)
 
 ## Projektledelse
 
 * [Arkitekturtegninger](docs/architectures.md)
+
+## Git
+
+* [Git guidelines](docs/git-guidelines.md)
 
 ## Old Guidelines for developing websites in the ITK organization
 
