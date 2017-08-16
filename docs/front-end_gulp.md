@@ -12,10 +12,16 @@ __Afgrænsning af metode__:
 
 Gulp bruges som preprocesser.
 
-## Instalation
+## Instalation og generel opsætning
 
 Kopier gulpfile.js + package.json fra /starterkits/gulp og kør `npm install``
 Rediger herefter gulpfile.js så stier og mappenavnen svare til dit projekt.
+
+Alle requirements tilføjes øverst i filen.
+
+Efterfølgende defineres variabler til brug i tasks.
+
+Herefter defineres alle tasks.
 
 ## Tasks
 
@@ -27,4 +33,18 @@ køres med: `gulp _taskname_`
 Scss er den task der sørger for at samle alle scss filer til en minified
 produktions klar css fil.
 
+<!-- @TODO
+
+### Default
+
 ### Watch
+
+### Clean
+
+### Browser-sync
+
+### Server
+
+### Fonts
+
+ -->
