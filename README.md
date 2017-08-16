@@ -8,6 +8,10 @@
 * [Drupal 8 opdateringer](docs/d8-updates.md)
 * [GIT guidelines](docs/git-guidelines.md)
 
+## Diverse
+
+* [Kort](docs/kort.md)
+
 ## Projektledelse
 
 * [Arkitekturtegninger](docs/architectures.md)
