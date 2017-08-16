@@ -48,9 +48,3 @@ bin/console doctrine:migrations:diff
 
 Se andre kommandoer her:
 [http://symfony.com/doc/master/bundles/DoctrineMigrationsBundle/index.html#usage](http://symfony.com/doc/master/bundles/DoctrineMigrationsBundle/index.html#usage)
-
-## Regel 5 - Ofte brugte moduler
-
-### FosUserBundle
-
-@TODO
