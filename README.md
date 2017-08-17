@@ -7,6 +7,7 @@
 * [Drupal 7 opdateringer](docs/d7-updates.md)
 * [Drupal 8 opdateringer](docs/d8-updates.md)
 * [GIT guidelines](docs/git-guidelines.md)
+* [ITK Packagist](docs/itk-packagist-guidelines.md)
 
 ## Projektledelse
 
@@ -69,6 +70,10 @@ tools/lint.sh $(git diff --name-only | grep '\.md$')
 
 ### Tips og tricks
 
+Her kommer en række tips og tricks til brug af Markdown til dokumentation.
+
+#### Kodeblokke
+
 Kodeblokke skal altid omkranses af `` ``` `` og `` ``` `` og sproget i
 kodeblokken skal angives, fx
 
@@ -84,4 +89,29 @@ kodeblokken skal angives, fx
     }
     ```
 
-Vi bruger “sh” som sprog for konsolbesværgelser.
+**Bemærk**: Vi bruger “sh” som sprog for konsolbesværgelser.
+
+#### Indholdsfortegnelser
+
+Takket være npm-pakken
+[markdown-toc](https://www.npmjs.com/package/markdown-toc) kan man
+nemt indsætte en indholdsfortegnelse i et Markdown-dokument:
+
+Hvis man tilføjer linjen
+
+```markdown
+<!-- toc -->
+```
+
+på et passende sted i et Markdown-dokument og kører kommandoen
+
+```sh
+tools/toc.sh [sti til dokument]
+```
+
+så vil `<!-- toc -->` blive erstattet med en indholdsfortegnelse
+bygget ud fra overskrifter i dokumentet. Man kan efterfølgende køre
+`tools/toc.sh` igen for at opdatere indholdsfortegnelsen i dokumentet.
+
+Hvis `tools/toc.sh` køres uden argumenter indsættes/opdateres
+indholdsfortegnelsen i alle dokumenter der indeholder `<!-- toc -->`.

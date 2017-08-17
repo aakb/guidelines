@@ -12,5 +12,6 @@
     },
     "MD029": {
         "style": "ordered"
-    }
+    },
+    "no-duplicate-header": false
 }
