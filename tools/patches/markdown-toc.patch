@@ -1,0 +1,13 @@
+diff --git a/node_modules/markdown-toc/cli.js b/node_modules/markdown-toc/cli.js
+index 59df22a..ce12983 100755
+--- a/node_modules/markdown-toc/cli.js
++++ b/node_modules/markdown-toc/cli.js
+@@ -37,7 +37,7 @@ if (args._[0] !== '-') input = fs.createReadStream(args._[0]);
+ 
+ input.pipe(utils.concat(function(input) {
+   if (args.i) {
+-    var newMarkdown = toc.insert(input.toString());
++    var newMarkdown = toc.insert(input.toString(), {bullets: ['*']});
+     fs.writeFileSync(args._[0], newMarkdown);
+   } else {
+     var parsed = toc(input.toString());
