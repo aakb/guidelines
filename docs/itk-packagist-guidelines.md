@@ -19,7 +19,8 @@ Moduler der skal anvendes som composer pakke skal indeholde en composer.json fil
 som definerer pakken.
 
 Eksempelvis:
-```
+
+```json
 {
   "name": "drupal/itk_cookie_message",
   "type": "drupal-module",
@@ -42,7 +43,6 @@ af pakkens type.
 For at oprette en ny pakke skal en bruger tilføjes og have de rigtige
 rettigheder. Herefter kan man tilføje pakken (submit) ved at referere til et
 offentligt repository (Eksempelvis git).
-
 
 ## Regel 4
 
