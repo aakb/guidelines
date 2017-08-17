@@ -8,6 +8,10 @@
 * [Drupal 8 opdateringer](docs/d8-updates.md)
 * [GIT guidelines](docs/git-guidelines.md)
 
+## Symfony
+
+* [Kodestandard](docs/symfony-kodestandard.md)
+
 ## Projektledelse
 
 * [Arkitekturtegninger](docs/architectures.md)
