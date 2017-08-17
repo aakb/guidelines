@@ -28,23 +28,156 @@ Herefter defineres alle tasks.
 Tasks er de opgaver som vi sætter gulp op til at køre på projekterne. Tasks kan
 køres med: `gulp _taskname_`
 
-### Scss - `gulp scss`
+### Scss - `sh gulp scss`
 
 Scss er den task der sørger for at samle alle scss filer til en minified
 produktions klar css fil.
 
-<!-- @TODO
+Eksempel:
 
-### Default
+```js
+gulp.task('sass', function () {
+    return gulp.src('scss/*.scss')
+        .pipe(plumber({ // More graceful error handling, prevents watch from breaking.
+        errorHandler: onError
+        }))
+        .pipe(sass()) // Converts Sass to CSS with gulp-sass
+        .pipe(gulp.dest('css/')) // Destination for css
+        .pipe(gulpIf('*.css', cssnano())) // minifi the css file
+        .pipe(bs.reload({stream: true}));
+});
 
-### Watch
+```
 
-### Clean
+### Default - `gulp`
 
-### Browser-sync
+Kører en standard sekvens af opgaver defineferet for projektet. Som udgangspunkt
+skal den indeholde alle de tasks der er nødvendige for at klagøre alle filer.
+Således det ikke efterfølgende er nødvendigt at køre andre tasks.
 
-### Server
+Eksempel:
 
-### Fonts
+```js
 
- -->
+gulp.task('default', function (callback) {
+  runSequence(['server', 'fonts', 'watch'],
+    callback
+  )
+});
+
+```
+
+### Watch - `gulp watch`
+
+Starter en task der detektere ændringer af filer, og som kalder de nødvendige
+tasks for at få bygget nye filer og få genindlæst browseren.
+
+Eksempel:
+
+```js
+
+gulp.task('watch', ['browser-sync'], function () {
+    gulp.watch("scss/**/*.scss", ['sass']);
+    gulp.watch("views/**/*.ejs").on('change', bs.reload);
+});
+
+```
+
+### Clean - `gulp clean`
+
+Rydder op i mapper med byggede filer, før de nye genereres.
+
+Eksempel:
+
+```js
+
+gulp.task('clean', function() {
+  del.sync('css');
+});
+
+```
+
+### Browser-sync - Kaldes af watch
+
+[Browser-sync docs](https://browsersync.io/docs/gulp)
+
+Sørger for at genindlæse browser efter ændringer.
+
+Eksempel:
+
+```js
+
+gulp.task('browser-sync', ['sass'], function() {
+    bs.init({
+        proxy: "localhost:8080",
+        ui: false
+    });
+});
+
+```
+
+### Server - `gulp server`
+
+Opgave til at starte fx en express server, når der udvikles i fx et template
+system, så det ikke er nødvendigt at køre den manuelt ved siden af.
+
+Eksempel:
+
+```js
+
+gulp.task('server',function(){
+    nodemon({
+        'script': 'server.js',
+        'ignore': '*.js'
+    });
+});
+
+```
+
+### Fonts - `gulp fonts`
+
+Kopier fonte installeret via npm til `/fonts` mappen.
+
+Eksempel:
+
+```js
+
+gulp.task('fonts', function() {
+  return gulp.src('node_modules/font-awesome/fonts/**/*')
+  .pipe(gulp.dest('fonts'))
+})
+
+```
+
+## Ofte brugte 3.parts plugins
+
+### scss
+
+[gulp-scss docs](https://www.npmjs.com/package/gulp-sass)
+
+Sørger for at lave scss om til css
+
+### cssnano
+
+[cssnano docs](http://cssnano.co/)
+
+Sørger for at optimere den generede css
+
+### plumber
+
+[gulp-plumber docs](https://www.npmjs.com/package/gulp-plumber)
+
+Undgå at watch stopper helt ved fejl. Sender i stedet fejlen til en funktion der
+sørger for at logge fejlen i konsollen.
+
+### runSequence
+
+[run-sequence](https://www.npmjs.com/package/run-sequence)
+
+Sikre at tasks starter i en bestemt rækkefølge.
+
+### gutil
+
+[gulp-util](https://www.npmjs.com/package/gulp-util)
+
+Bruges til at logge fejl til konsollen
