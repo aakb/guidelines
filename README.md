@@ -7,6 +7,7 @@
 * [Drupal 7 opdateringer](docs/d7-updates.md)
 * [Drupal 8 opdateringer](docs/d8-updates.md)
 * [GIT guidelines](docs/git-guidelines.md)
+* [ITK Packagist](docs/itk-packagist-guidelines.md)
 
 ## Projektledelse
 
