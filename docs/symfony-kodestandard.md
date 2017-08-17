@@ -27,13 +27,19 @@ Et godt bud på et værktøj der kan hjælpe os med at overholde
 kodestandarden er [The PHP Coding Standards
 Fixer](http://cs.sensiolabs.org/). Som navnet antyder er dette en
 "fixer", dvs. værktøjet kan rette eventuelle fejl, men man kan også få
-en liste over hvilke rettelser der skal laves for at overhold
+en liste over hvilke rettelser der skal laves for at overholde
 standarden.
 
 ### Installering af PHP Coding Standards Fixer
 
 ```sh
 brew install php-cs-fixer
+```
+
+eller
+
+```sh
+composer global require friendsofphp/php-cs-fixer
 ```
 
 #### Tjek kode
@@ -77,7 +83,7 @@ ligge i roden af projektet:
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-     ->in(__DIR__.'/{app,src,tests}');
+    ->in(__DIR__.'/{app,src,tests}');
 
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
