@@ -45,7 +45,8 @@ Ingen.
 
 Installer [Symfony PHP CodeSniffer Coding
 Standard](https://github.com/djoos/Symfony-coding-standard) – enten
-lokalt i projektet eller globalt.
+lokalt i projektet eller globalt
+(jf. [https://github.com/djoos/Symfony-coding-standard#installation](https://github.com/djoos/Symfony-coding-standard#installation)).
 
 Opret `phpcs.xml.dist` i roden af projektet med indhold a la følgende:
 
