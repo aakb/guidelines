@@ -2,7 +2,23 @@
 
 **Metodeansvarlig**: Mikkel Ricky
 
-**Overordnet formål**: Bekrivelse af ITK's kodestandard for Symfony-projekter
+**Overordnet formål**: Beskrivelse af ITK's kodestandard for Symfony-projekter
+
+<!-- toc -->
+
+* [Kodestandarden](#kodestandarden)
+  * [Undtagelser fra Symfonys kodestandard](#undtagelser-fra-symfonys-kodestandard)
+  * [Tilføjelser til Symfonys kodestandard](#tilfojelser-til-symfonys-kodestandard)
+* [Værktøjer](#vaerktojer)
+  * [PHP_CodeSniffer](#php_codesniffer)
+    * [Konfiguration](#konfiguration)
+  * [The PHP Coding Standards Fixer](#the-php-coding-standards-fixer)
+    * [Installation](#installation)
+    * [Brug](#brug)
+    * [Konfiguration](#konfiguration-1)
+    * [Integrationer](#integrationer)
+
+<!-- tocstop -->
 
 ## Kodestandarden
 
@@ -23,6 +39,40 @@ Ingen.
 
 ## Værktøjer
 
+### PHP_CodeSniffer
+
+#### Konfiguration
+
+Installer [Symfony PHP CodeSniffer Coding
+Standard](https://github.com/djoos/Symfony-coding-standard) – enten
+lokalt i projektet eller globalt.
+
+Opret `phpcs.xml.dist` i roden af projektet med indhold a la følgende:
+
+```xml
+<?xml version="1.0"?>
+
+<ruleset name="PHP_CodeSniffer">
+  <description>The project coding standard.</description>
+
+  <!-- The coding standard -->
+  <rule ref="Symfony"/>
+
+  <file>src/</file>
+  <file>tests/</file>
+
+  <!-- No warnings -->
+  <arg value="n"/>
+  <!-- Show progress -->
+  <arg value="p"/>
+
+  <!-- Check only php files -->
+  <arg name="extensions" value="php"/>
+</ruleset>
+```
+
+### The PHP Coding Standards Fixer
+
 Et godt bud på et værktøj der kan hjælpe os med at overholde
 kodestandarden er [The PHP Coding Standards
 Fixer](http://cs.sensiolabs.org/). Som navnet antyder er dette en
@@ -30,7 +80,7 @@ Fixer](http://cs.sensiolabs.org/). Som navnet antyder er dette en
 en liste over hvilke rettelser der skal laves for at overholde
 standarden.
 
-### Installering af PHP Coding Standards Fixer
+#### Installation
 
 ```sh
 brew install php-cs-fixer
@@ -42,7 +92,7 @@ eller
 composer global require friendsofphp/php-cs-fixer
 ```
 
-#### Tjek kode
+#### Brug
 
 Et "dry run" af `php-cs-fixer` viser hvilke filer der indeholder fejl,
 men retter ikke i filerne:
