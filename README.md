@@ -9,6 +9,10 @@
 * [GIT guidelines](docs/git-guidelines.md)
 * [ITK Packagist](docs/itk-packagist-guidelines.md)
 
+## Symfony
+
+* [Kodestandard](docs/symfony-kodestandard.md)
+
 ## Projektledelse
 
 * [Arkitekturtegninger](docs/architectures.md)
