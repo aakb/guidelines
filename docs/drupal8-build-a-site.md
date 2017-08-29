@@ -78,6 +78,8 @@ Custom modules, profiles og themes lægges under:
 
 Vi bruger følgende opsætning af sites/default:
 
+@TODO: tilføj information omkring hvordan man activer local settings etc. på det clean site.
+
 `settings.php` indeholder ingen hemmelig data (+ er i git) men linker til
 `settings.local.php` som indeholder disse data. Dette gør at vi kan deploye let
 til platform.sh.
