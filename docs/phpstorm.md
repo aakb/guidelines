@@ -41,6 +41,12 @@ Sæt `Path to ruleset` til stien til projektets `phpcs.xml.dist`-fil.
 
 Deaktiver evt. “Inspections” der ikke er aktuelle for projektet.
 
+**Bemærk**: Drupal coder forsøger at gætte versionen af Drupal som en
+fil tilhører. Det kan skidtet ikke når det køres fra PhpStorm og
+derfor bliver visse tjek (fx
+`Drupal.Array.DisallowLongArraySyntax.Found`) ikke udført
+korrekt. Kør derfor altid `phpcs` i terminalen.
+
 ## Tjek af kode
 
 Via `Inspect Code…` kan koden nu tjekkes
