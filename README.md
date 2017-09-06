@@ -13,6 +13,11 @@
 
 * [Kodestandard](docs/symfony-kodestandard.md)
 
+## Værktøjer
+
+* [Værktøjer](docs/tools.md)
+* [PhpStorm](docs/phpstorm.md)
+
 ## Projektledelse
 
 * [Arkitekturtegninger](docs/architectures.md)
