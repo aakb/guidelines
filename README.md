@@ -19,17 +19,21 @@
 * [Værktøjer](docs/tools.md)
 * [PhpStorm](docs/phpstorm.md)
 
+## Server
+
+* [Opret nyt site](docs/server/opret_nyt_site.md)
+
 ## Projektledelse
 
 * [Arkitekturtegninger](docs/architectures.md)
 
 ## Old Guidelines for developing websites in the ITK organization
 
-* [Behat testing guidelines](docs/behat-testing.md)
-* [Code standards](docs/code-standards.md)
-* [CSS guidelines](docs/css-guidelines.md)
-* [Javascript guidelines](docs/js-guidelines.md)
-* [Project checklist](docs/project-checklist.md)
+* [Behat testing guidelines](docs/old/behat-testing.md)
+* [Code standards](docs/old/code-standards.md)
+* [CSS guidelines](docs/old/css-guidelines.md)
+* [Javascript guidelines](docs/old/js-guidelines.md)
+* [Project checklist](docs/old/project-checklist.md)
 
 --------------------------------------------------------------------------------
 
