@@ -72,6 +72,9 @@ Opret `phpcs.xml.dist` i roden af projektet med indhold a la følgende:
 </ruleset>
 ```
 
+* [Dokk1-gæstehåndtering](https://github.com/aakb/dokk1gh/tree/develop)
+  [[`phpcs.xml.dist`](https://github.com/aakb/dokk1gh/tree/develop/phpcs.xml.dist)]
+
 ### The PHP Coding Standards Fixer
 
 Et godt bud på et værktøj der kan hjælpe os med at overholde
@@ -144,6 +147,9 @@ return PhpCsFixer\Config::create()
     ])
     ->setFinder($finder);
 ```
+
+* [Dokk1-gæstehåndtering](https://github.com/aakb/dokk1gh/tree/develop)
+  [[`.php_cs.dist`](https://github.com/aakb/dokk1gh/tree/develop/.php_cs.dist)]
 
 **@TODO**: Hvordan holder vi denne fil opdateret på tværs af Symfony-projekter?
 
