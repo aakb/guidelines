@@ -18,14 +18,14 @@ eu vulputate felis rhoncus. Ambitioni dedisse scripsisse iudicaretur.
 
 ## Regeler
 
-### § 1
+### § 1 - NAME
 
 Ambitioni dedisse scripsisse iudicaretur.
 
-### § 2
+### § 2 - NAME
 
 Ab illo tempore, ab est sed immemorabili.
 
-### § 3
+### § 3 - NAME
 
 Curabitur blandit tempus ardua ridiculus sed magna.
