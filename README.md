@@ -21,6 +21,7 @@
 ## Server
 
 * [Opret nyt site](docs/server/opret_nyt_site.md)
+* [Packagist](docs/server/packagist.md)
 
 ## Projektledelse
 
