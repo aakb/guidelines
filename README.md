@@ -18,6 +18,10 @@
 * [Værktøjer](docs/tools.md)
 * [PhpStorm](docs/phpstorm.md)
 
+## Server
+
+ * [Opret nyt site](docs/server/opret_nyt_site.md)
+
 ## Projektledelse
 
 * [Arkitekturtegninger](docs/architectures.md)
