@@ -1,22 +1,22 @@
 # HEAD LINE
 
-__Metodeansvarlig__: Your name
+__Responsible__: Your name
 
-__Opdateret__: 07/09/17
+__Updateted__: 07/09/17
 
-## Overordnet formål
+## Overall purpose
 
 * Morbi odio eros.
 * Volutpat ut pharetra vitae.
 * lobortis sed nibh.
 
-## Afgrænsning af metode
+## Limitation of method
 
 Quae vero auctorem tractata ab fiducia dicuntur. Tu quoque,
 Brute, fili mi, nihil timor populi, nihil! Donec sed odio operae,
 eu vulputate felis rhoncus. Ambitioni dedisse scripsisse iudicaretur.
 
-## Regeler
+## Rules
 
 ### § 1 - NAME
 
