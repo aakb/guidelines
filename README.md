@@ -12,6 +12,7 @@
 ## Symfony
 
 * [Kodestandard](docs/symfony-kodestandard.md)
+* [Bundles](docs/symfony-bundles.md)
 
 ## Værktøjer
 
