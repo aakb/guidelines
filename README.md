@@ -18,6 +18,7 @@
 
 * [Værktøjer](docs/tools.md)
 * [PhpStorm](docs/phpstorm.md)
+* [Scrutinizer CI](docs/scrutinizer.md)
 
 ## Server
 
