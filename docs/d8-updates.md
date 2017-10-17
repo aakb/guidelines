@@ -37,7 +37,7 @@ Opdatér database og eksportér ny konfiguration:
 
 ```sh
 drush updb
-drush entup
+drush updb --entity-updates
 drush config-export
 ```
 
@@ -107,9 +107,9 @@ git checkout [version number]
 Opdatér db
 
 ```sh
-drush updb
-drush entup
 drush config-import
+drush updb --entity-updates
+drush updb
 ```
 
 Opdatér sprogpakker
