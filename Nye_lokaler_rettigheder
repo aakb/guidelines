@@ -1,0 +1,17 @@
+Exchange rettigheder til Dokk1 lokale administratorer
+
+Følgende gøres normalt af brugerservice og er derfor ikke en opgave for teamet, men alligevel rar at vide at man kan.
+
+Nye offentlige lokaler i dokk1 skal have rettigheder tildelt til en gruppe medarbejdere på følgende måde:
+
+1.	Gå til portal.office.dk
+2.	Log ind som BookingCloud@aarhus.dk
+3.	Vælg kalender
+4.	Klik på profil navn i højre øverste hjørne og klik ””Open another mailboks”
+5.	Indtast navn på det nye lokale
+6.	Vælg ”share”
+7.	Tilføj brugergruppen ” UG-TVO-DOKK1-LokaleKalenderRedaktoer” eller en anden mailboks. 
+8.	Vælg rettighederne ”Can edit” (rediger)
+9.	Gem
+
+Brugerne af gruppen modtager en mail om at de har fået adgang til at lave bookinger direkte i kalenderen i exchange.
