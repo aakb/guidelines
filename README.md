@@ -29,6 +29,9 @@
 
 * [Arkitekturtegninger](docs/architectures.md)
 
+## Fællesservice stuff
+* [Rettigheder til nye lokaler Dokk1](docs/Nye_lokaler_rettigheder)
+
 ## Old Guidelines for developing websites in the ITK organization
 
 * [Behat testing guidelines](docs/old/behat-testing.md)
