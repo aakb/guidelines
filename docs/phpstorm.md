@@ -5,6 +5,7 @@
 * [Drupal](#drupal)
 * [Drupal-opsætning i PhpStorm](#drupal-opsaetning-i-phpstorm)
 * [Tjek af kode](#tjek-af-kode)
+  * [Eksempler](#eksempler)
 * [Litteraturliste](#litteraturliste)
 
 <!-- tocstop -->
@@ -41,6 +42,12 @@ Sæt `Path to ruleset` til stien til projektets `phpcs.xml.dist`-fil.
 
 Deaktiver evt. “Inspections” der ikke er aktuelle for projektet.
 
+**Bemærk**: Drupal coder forsøger at gætte versionen af Drupal som en
+fil tilhører. Det kan skidtet ikke når det køres fra PhpStorm og
+derfor bliver visse tjek (fx
+`Drupal.Array.DisallowLongArraySyntax.Found`) ikke udført
+korrekt. Kør derfor altid `phpcs` i terminalen for en sikkerheds skyld.
+
 ## Tjek af kode
 
 Via `Inspect Code…` kan koden nu tjekkes
@@ -57,7 +64,9 @@ for detaljer og sikr at `.gitignore` indeholder reglerne fra
 
 ### Eksempler
 
-* [Dokk1-gæstehåndtering](https://github.com/aakb/dokk1gh/tree/develop/.idea)
+* [Dokk1-gæstehåndtering](https://github.com/aakb/dokk1gh/tree/develop)
+  [[`phpcs.xml.dist`](https://github.com/aakb/dokk1gh/tree/develop/phpcs.xml.dist)]
+  [[`.idea/`](https://github.com/aakb/dokk1gh/tree/develop/.idea/)]
 
 ## Litteraturliste
 
