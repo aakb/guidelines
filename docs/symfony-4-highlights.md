@@ -10,7 +10,7 @@
   * https://github.com/itk-dev/datatidy/tree/develop/doc
 * [Automated tests](https://mikkelricky.dk/wordpress/wp-content/themes/mikkelricky/assets/images/lille_lars_hopper.jpg)
   * https://github.com/itk-dev/datatidy/tree/develop/tests
-* Reusable bundles (composer packages)
+* [Reusable bundles (composer packages)](https://packagist.org/users/itkdev/packages/)
   * https://github.com/itk-dev/user-bundle
   * https://github.com/itk-dev/user-management-bundle
   * More to come …
