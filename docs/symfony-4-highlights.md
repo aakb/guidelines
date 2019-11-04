@@ -8,3 +8,4 @@
   * https://github.com/itk-dev/datatidy/blob/develop/doc/localisation.md
 * Documentation (!)
   * https://github.com/itk-dev/datatidy/tree/develop/doc
+* [Automated tests](https://mikkelricky.dk/wordpress/wp-content/themes/mikkelricky/assets/images/lille_lars_hopper.jpg)
