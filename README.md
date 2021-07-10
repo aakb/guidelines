@@ -25,6 +25,10 @@
 * [Opret nyt site](docs/server/opret_nyt_site.md)
 * [Packagist](docs/server/packagist.md)
 
+## Diverse
+
+* [Kort](docs/kort.md)
+
 ## Projektledelse
 
 * [Arkitekturtegninger](docs/architectures.md)
